@@ -1,0 +1,131 @@
+#!/usr/bin/env php
+<?php
+include 'helpers/string-helpers.php';
+// action
+switch($_SERVER['argv'][1]) {
+  case 'models':
+    generate_models();
+    break;
+    
+  case 'controller':
+    generate_controller($_SERVER['argv'][2]);
+    break;
+    
+  case 'delgreet':
+    delete_greeting();
+    break;
+    
+  case 'sql':
+    run_sql();
+  
+  default:
+    show_instructions();
+}
+// functions
+function show_instructions() {
+  echo "
+models            - create a skeletal model file for each table in database
+model      [name] - create a skeletal model file named [name]
+controller [name] - create a skeletal controller file named [controller]
+delgreet          - delete all files associated with the greeting\n\n";
+}
+function generate_models() {
+  include 'core/db-core.php';
+  include 'app/config.php';
+  if(!isset($config['database']['path'])) {
+    echo "no database path found in app/config.php\n";
+    die();
+  } else {
+    $db = new Database($config['database']['path']);
+    foreach($db->tables as $table_name) {
+      $singular = singularize($table_name);
+      generate_model($singular);
+    }
+  }
+}
+function generate_model($name) {
+  $path = "app/models/$name.php";
+  if(file_exists($path)) {
+    echo "exists $path\n";
+  } else {
+    echo "create $path\n";
+    file_put_contents($path,"<?php
+class $singular extends DatabaseObject {
+  function connect() {
+
+  }
+}
+?>");
+  }
+}
+function generate_controller($controller_name) {
+  $path = "app/controllers/$controller_name-controller.php";
+  if(file_exists($path)) {
+    echo "exists $path\n";
+  } else {
+    echo "create $path\n";
+    $singular = singularize($controller_name); 
+    file_put_contents($path,"<?php
+class $controller_name"."_controller {
+  function __construct() {
+    \$this->$singular = new $singular(\$GLOBALS['ident']);
+  }
+  function index() {
+
+  }
+}
+?>");
+  }
+}
+function make_views($controller) {
+  $path = "app/views/html/layout.php";
+  if(file_exists($path)) {
+    echo "exists $path\n";
+  } else {
+    echo "create $path\n";
+    file_put_contents($path,'');
+  }
+  $path = "app/views/html/$controller/";
+  if(file_exists($path)) {
+    echo "exists $path\n";
+  } else {
+    echo "create $path\n";
+    mkdir($path);
+  }
+}
+function delete_greeting() {
+  $paths = array(
+    'app/views/html/layout.php',
+    'app/views/html/greeting/helloworld.php',
+    'app/controllers/greeting-controller.php'
+  );
+  foreach($paths as $path) {
+    if(file_exists($path)) {
+      echo "delete $path\n";
+      unlink($path);
+    }
+  }
+  echo "delete app/views/html/greeting/\n";
+  rmdir('app/views/html/greeting/');
+}
+function run_sql() {
+  // put together SQL string (this can be refactored...)
+  $beg = 2;
+  $end = $_SERVER['argc']-1;
+  $sql_array = array();
+  for($i=$beg; $i<$end; $i++) {
+    array_push($sql_array,$_SERVER['argv'][$i]);
+  }
+  $sql = implode(' ',$sql_array);
+  // run it
+  include 'core/db-core.php';
+  include 'app/config.php';
+  if(!isset($config['database']['path'])) {
+    echo "no database path found in app/config.php\n";
+  } else {
+    $db = new Database($config['database']['path']);
+    $result = $db->query($sql);
+    var_dump($result);
+  }
+}
+?>
