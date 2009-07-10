@@ -2282,3 +2282,350 @@ SELECT * FROM Realm
 GET /index.php/institutions/
 
 SELECT * FROM Institution  
+
+GET /
+
+
+GET /index.php/users/register
+
+
+POST /index.php/users/register
+
+SELECT id FROM Users  ORDER BY id DESC
+INSERT INTO Users (email, name, location, password, id) VALUES ('Cristi.Magherusan@net.utcluj.ro', 'Cristi Măgherușan', 'cluj', '2722579be3465c7b488ee5b31b27ab94', 2)
+
+POST /index.php/users/register
+
+
+GET /index.php/users/login
+
+
+POST /index.php/users/login
+
+SELECT * FROM Users WHERE email = 'cristi.magherusan@net.utcluj.ro' 
+
+GET /index.php/users/login
+
+
+POST /index.php/users/login
+
+SELECT * FROM Users WHERE email = 'Cristi.Magherusan@net.utcluj.ro' 
+
+GET /index.php/users/prefs
+
+
+GET /index.php/realms/
+
+SELECT * FROM Realm WHERE id = '1' 
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/institutions/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Institution WHERE id = '1' 
+
+GET /index.php/institutions/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Institution WHERE id = '1' 
+
+GET /
+
+
+POST /
+
+SELECT * FROM Users WHERE email = 'stas@nerd.ro' 
+
+GET /index.php/users/prefs
+
+
+GET /index.php/realms/
+
+SELECT * FROM Realm WHERE id = '1' 
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/edit/1
+
+
+GET /index.php/realms/edit/1
+
+SELECT id FROM Realm  ORDER BY id DESC
+INSERT INTO Realm (ts, id) VALUES ('2009-07-10', 2)
+
+GET /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/realms/add
+
+SELECT * FROM Realm WHERE id = '1' 
+UPDATE Realm SET country = '', stype = '', org_name = '', address_street = '', address_city = '', contact_name = '', contact_email = '', contact_phone = '', info_URL = '', policy_URL = '', ts = '2009-07-10' WHERE id = '1'
+
+GET /index.php/realms/add
+
+
+GET /index.php/realms/add
+
+
+GET /index.php/realms/add
+
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/delete/2
+
+SELECT * FROM Realm WHERE id = '2' 
+DELETE FROM Realm WHERE id = '2'
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/delete/1
+
+SELECT * FROM Realm WHERE id = '1' 
+DELETE FROM Realm WHERE id = '1'
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/add/
+
+
+POST /index.php/realms/add/
+
+SELECT id FROM Realm  ORDER BY id DESC
+INSERT INTO Realm (ts, id) VALUES ('2009-07-10', 1)
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/delete/1
+
+SELECT * FROM Realm WHERE id = '1' 
+DELETE FROM Realm WHERE id = '1'
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+POST /index.php/realms/add/
+
+SELECT id FROM Realm  ORDER BY id DESC
+INSERT INTO Realm (country, stype, org_name, address_street, address_city, contact_name, contact_email, contact_phone, info_URL, policy_URL, ts, id) VALUES ('RO', '0', 'TUCN', 'Baritiu nr. 26 str., 400020 Cluj-Napoca, România', 'Cluj-Napoca', 'Technical University Of Cluj-Napoca', 'admin@net.utcluj.ro', '40264401200', 'http://utcluj.ro', 'http://cc.utcluj.ro', '2009-07-10', 1)
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+
+POST /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+UPDATE Realm SET country = 'RO', stype = '1', org_name = 'TUCN', address_street = 'Baritiu nr. 26 str., 400020 Cluj-Napoca, România', address_city = 'Cluj-Napoca', contact_name = 'Technical University Of Cluj-Napoca', contact_email = 'admin@net.utcluj.ro', contact_phone = '40264401200', info_URL = 'http://utcluj.ro', policy_URL = 'http://cc.utcluj.ro', ts = '2009-07-10' WHERE id = '1'
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+
+POST /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+UPDATE Realm SET country = 'RO', stype = '0', org_name = 'TUCN', address_street = 'Baritiu nr. 26 str., 400020 Cluj-Napoca, România', address_city = 'Cluj-Napoca', contact_name = 'Technical University Of Cluj-Napoca', contact_email = 'admin@net.utcluj.ro', contact_phone = '40264401200', info_URL = 'http://utcluj.ro', policy_URL = 'http://cc.utcluj.ro', ts = '2009-07-10' WHERE id = '1'
+SELECT * FROM Realm WHERE id = '1' 
+
+POST /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+UPDATE Realm SET country = 'RO', stype = '0', org_name = 'TUCNa', address_street = 'Baritiu nr. 26 str., 400020 Cluj-Napoca, România', address_city = 'Cluj-Napoca', contact_name = 'Technical University Of Cluj-Napoca', contact_email = 'admin@net.utcluj.ro', contact_phone = '40264401200', info_URL = 'http://utcluj.ro', policy_URL = 'http://cc.utcluj.ro', ts = '2009-07-10' WHERE id = '1'
+SELECT * FROM Realm WHERE id = '1' 
+
+POST /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+UPDATE Realm SET country = 'RO', stype = '0', org_name = 'TUCN', address_street = 'Baritiu nr. 26 str., 400020 Cluj-Napoca, România', address_city = 'Cluj-Napoca', contact_name = 'Technical University Of Cluj-Napoca', contact_email = 'admin@net.utcluj.ro', contact_phone = '40264401200', info_URL = 'http://utcluj.ro', policy_URL = 'http://cc.utcluj.ro', ts = '2009-07-10' WHERE id = '1'
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/add/
+
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/institutions/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Institution WHERE id = '1' 
+
+GET /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/realms/add/
+
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/add
+
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/add
+
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/institutions/add
+
+SELECT * FROM Realm  
+
+GET /index.php/institutions/add
+
+SELECT * FROM Realm  
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  

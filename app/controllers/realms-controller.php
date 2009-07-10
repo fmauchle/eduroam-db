@@ -2,25 +2,10 @@
     class realms_controller {
         
         function index() {
-            $realm = $this->get("1");
-            if($realm != null) {
-                if($_POST["updaterealm"] == "updaterealm")
-                {
-                    $this->update_realm($_POST);
-                }
-            }
-            else {
-                if($_POST["action"] == "updaterealm")
-                {
-                    $this->add_realm($_POST);
-                }
-            }
-            
-            $realm = $this->get("1");
-            pass_var("realm", $realm->data);
-            
-            pass_var('title', "Realm");
-            pass_var('message', "Update the realm");
+            $r = new Realm();
+            pass_var("r", $r->find_all());
+            pass_var('title', "Realms Index");
+            pass_var('message', "List of Realms");
         }
         
         function get($id) {
@@ -28,35 +13,63 @@
             return $r->find_one_by_id($id);
         }
         
-        function add_realm($data) {
-            unset($data["action"]);
-            unset($data["updaterealm"]);
-            $data["ts"] = date("Y-m-d");
-            $r = new Realm($data);
-            $r->save();
+        function edit() {            
+            if($_POST["action"] == "updaterealm") {
+                global $runtime;
+                $data = $_POST;
+                unset($data["action"]);
+                unset($data["updaterealm"]);
+                $data["ts"] = date("Y-m-d");
+                $r = new Realm();
+                $r = $r->find_one_by_id($runtime['ident']);
+                $r->data = $data;
+                $r->dirty = array(
+                                    'country',
+                                    'stype',
+                                    'org_name',
+                                    'address_street',
+                                    'address_city',
+                                    'contact_name',
+                                    'contact_email',
+                                    'contact_phone',
+                                    'info_URL',
+                                    'policy_URL',
+                                    'ts'
+                                );
+                $r->save();
+                $r = $r->find_one_by_id($runtime['ident']);
+                pass_var("realm", $r->data);
+            }
+            else {
+                global $runtime;
+                $r = new Realm();
+                $r = $r->find_one_by_id($runtime['ident']);
+                pass_var("realm", $r->data);
+            }
+            
+            pass_var('title', "Edit Realm");
+            pass_var('message', "Edit Realms");
         }
         
-        function update_realm($data) {
-            unset($data["action"]);
-            unset($data["updaterealm"]);
-            $data["ts"] = date("Y-m-d");
-            $r = new Realm();
-            $r = $r->find_one_by_id("1");
-            $r->data = $data;
-            $r->dirty = array(
-                                'country',
-                                'stype',
-                                'org_name',
-                                'address_street',
-                                'address_city',
-                                'contact_name',
-                                'contact_email',
-                                'contact_phone',
-                                'info_URL',
-                                'policy_URL',
-                                'ts'
-                            );
-            $r->save();
+        function add() {
+            if($_POST["action"] == "addrealm") {
+                $data = $_POST;
+                unset($data["action"]);
+                unset($data["addrealm"]);
+                $data["ts"] = date("Y-m-d");
+                $r = new Realm($data);
+                $r->save();
+            }
+            pass_var('title', "Add Realm");
+            pass_var('message', "Add Realm");
+        }
+        
+        function delete() {
+            global $runtime;
+            $i = new Realm();
+            $i = $i->find_one_by_id($runtime['ident']);
+            $i->delete();
+            redirect('realms/');
         }
         
     }
