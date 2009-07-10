@@ -2629,3 +2629,944 @@ SELECT * FROM Institution
 GET /index.php/realms/
 
 SELECT * FROM Realm  
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/institutions/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Institution WHERE id = '1' 
+
+GET /index.php/services/
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/users/logout
+
+
+GET /index.php/
+
+
+POST /index.php/
+
+SELECT * FROM Users WHERE email = 'stas@nerd.ro' 
+
+GET /index.php/users/prefs
+
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/index
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/add
+
+
+GET /index.php/users/logout
+
+
+GET /index.php/
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/add
+
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/users/logout
+
+
+GET /index.php/
+
+
+POST /index.php/
+
+SELECT * FROM Users WHERE email = 'stas@nerd.ro' 
+
+GET /index.php/users/prefs
+
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/institutions/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Institution WHERE id = '1' 
+
+GET /index.php/services/
+
+
+GET /index.php/services/add
+
+
+GET /index.php/services/
+
+
+GET /index.php/services/
+
+
+GET /index.php/
+
+
+POST /index.php/
+
+SELECT * FROM Users WHERE email = 'stas@nerd.ro' 
+
+GET /index.php/users/prefs
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/services/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/add
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/add
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/sls
+
+
+GET /index.php/service_locs/add
+
+
+GET /index.php/sls/add
+
+
+GET /index.php/sls/add
+
+
+GET /index.php/sls/add
+
+
+GET /index.php/sls/add
+
+
+GET /index.php/sls/
+
+
+GET /index.php/sls/
+
+
+GET /index.php/sls/
+
+
+GET /index.php/sls/
+
+
+GET /index.php/sls/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/add
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/service_locs/add
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/add
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/realmdata
+
+
+GET /index.php/realmdata
+
+
+GET /index.php/realmdata
+
+
+GET /index.php/realmdata
+
+
+GET /index.php/realmdata
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdata
+
+
+GET /index.php/realmdata
+
+
+GET /index.php/realmdata
+
+
+GET /index.php/realmdata
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas
+
+
+GET /index.php/realmdatas/index
+
+
+GET /index.php/realmdatas/index
+
+
+GET /index.php/realmdatas/index
+
+
+GET /index.php/realmdatas/index
+
+
+GET /index.php/realmdatas/index
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/add
+
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /
+
+
+GET /index.php/users/register
+
+
+POST /index.php/users/register
+
+SELECT id FROM Users  ORDER BY id DESC
+INSERT INTO Users (email, name, location, password, id) VALUES ('claudiu.demian@net.utcluj.ro', 'Claudiu Demian', 'Cucurigu', 'ab08dc26d446da1fa22c502ad0829396', 3)
+
+POST /index.php/users/register
+
+
+GET /index.php/users/login
+
+
+POST /index.php/users/login
+
+SELECT * FROM Users WHERE email = 'claudiu.demian@net.utcluj.ro' 
+
+GET /index.php/users/prefs
+
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+POST /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+POST /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+POST /index.php/service_locs/add
+
+
+POST /index.php/service_locs/add
+
+SELECT id FROM service_loc  ORDER BY id DESC
+INSERT INTO service_loc (institutionid, longitude, latitude, loc_name, address_street, address_city, contact_name, contact_email, contact_phone, ssid, enc_level, port_restrict, transp_proxy, ipv6, nat, ap_no, wired, info_URL, ts, id) VALUES ('1', '233524,96', '464521,62', 'Caminul 7', 'Str. Observatorului nr 34', 'Cluj-Napoca', 'Stanislav Suscov', 'stas@nerd.ro', '40765655963', 'eduroam', 'WPA2/TKIP', '1', '1', '0', '0', '1', '1', 'intranet.c7obs.net', '2009-07-10', 1)
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/services/edit/1
+
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM Realm WHERE id = '1' 
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+POST /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+UPDATE service_loc SET institutionid = '1', longitude = '233524,96', latitude = '233524,96', loc_name = 'Caminul 7', address_city = 'Cluj-Napoca', contact_name = 'Stanislav Suscov', contact_email = 'stas@nerd.ro', contact_phone = '40765655963', ssid = '', enc_level = 'WPA2/TKIP', port_restrict = '1', transp_proxy = '1', ipv6 = '', nat = '', ap_no = '', wired = '1', info_URL = 'intranet.c7obs.net', ts = '2009-07-10' WHERE id = '1'
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+POST /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+UPDATE service_loc SET institutionid = '1', longitude = '233524,96', latitude = '233524,96', loc_name = 'Caminul 7', address_city = 'Cluj-Napoca', contact_name = 'Stanislav Suscov', contact_email = 'stas@nerd.ro', contact_phone = '40765655963', SSID = 'eduroam', enc_level = 'WPA2/TKIP', port_restrict = '1', transp_proxy = '1', IPv6 = '0', NAT = '0', AP_no = '12', wired = '1', info_URL = 'intranet.c7obs.net', ts = '2009-07-10' WHERE id = '1'
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+POST /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+UPDATE service_loc SET institutionid = '1', longitude = '233524,96', latitude = '233524,96', loc_name = 'Caminul 7', address_city = 'Cluj-Napoca', contact_name = 'Stanislav Suscov', contact_email = 'stas@nerd.ro', contact_phone = '40765655963', SSID = 'eduroam', enc_level = 'WPA2/TKIP', port_restrict = '1', transp_proxy = '1', IPv6 = '0', NAT = '0', AP_no = '1', wired = '1', info_URL = 'intranet.c7obs.net', ts = '2009-07-10' WHERE id = '1'
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+POST /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+UPDATE service_loc SET institutionid = '1', longitude = '233524,96', latitude = '233524,96', loc_name = 'Caminul 7', address_city = 'Cluj-Napoca', contact_name = 'Stanislav Suscov', contact_email = 'stas@nerd.ro', contact_phone = '40765655963', SSID = 'eduroam', enc_level = 'WPA2/TKIP', port_restrict = '1', transp_proxy = '1', IPv6 = '0', NAT = '1', AP_no = '1', wired = '1', info_URL = 'intranet.c7obs.net', ts = '2009-07-10' WHERE id = '1'
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+POST /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+UPDATE service_loc SET institutionid = '1', longitude = '233524,96', latitude = '233524,96', loc_name = 'Caminul 7', address_city = 'Cluj-Napoca', contact_name = 'Stanislav Suscov', contact_email = 'stas@nerd.ro', contact_phone = '40765655963', SSID = 'eduroam', enc_level = 'WPA2/TKIP', port_restrict = '1', transp_proxy = '1', IPv6 = '0', NAT = '0', AP_no = '1', wired = '1', info_URL = 'intranet.c7obs.net', ts = '2009-07-10' WHERE id = '1'
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
