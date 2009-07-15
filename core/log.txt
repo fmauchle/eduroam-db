@@ -3949,3 +3949,220 @@ GET /index.php/realm_datas/
 
 SELECT * FROM Realm  
 SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_datas/add
+
+SELECT * FROM Realm  
+
+GET /index.php/realm_datas/add
+
+SELECT * FROM Realm  
+
+GET /index.php/realm_datas/add
+
+SELECT * FROM Realm  
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_datas/add
+
+SELECT * FROM Realm  
+
+GET /index.php/realm_datas/add
+
+SELECT * FROM Realm  
+
+GET /index.php/realm_datas/add
+
+SELECT * FROM Realm  
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_usages/add
+
+SELECT * FROM Realm  
+
+POST /index.php/realm_usages/add
+
+SELECT * FROM Realm  
+SELECT id FROM Realm_usage  ORDER BY id DESC
+INSERT INTO Realm_usage (realmid, national_sn, international_sn, ts, id) VALUES ('1', '13', '111', '2009-07-15', 1)
+
+POST /index.php/realm_usages/add
+
+SELECT * FROM Realm  
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_usages/add
+
+SELECT * FROM Realm  
+
+POST /index.php/realm_usages/add
+
+SELECT * FROM Realm  
+SELECT id FROM Realm_usage  ORDER BY id DESC
+INSERT INTO Realm_usage (realmid, national_sn, international_sn, ts, id) VALUES ('2', '13', '111', '2009-07-15', 1)
+
+POST /index.php/realm_usages/add
+
+SELECT * FROM Realm  
+SELECT id FROM Realm_usage  ORDER BY id DESC
+INSERT INTO Realm_usage (realmid, national_sn, international_sn, data, id) VALUES ('2', '13', '111', '2009-07-15', 1)
+
+GET /index.php/realm_usages/add
+
+SELECT * FROM Realm  
+
+POST /index.php/realm_usages/add
+
+SELECT * FROM Realm  
+SELECT id FROM Realm_usage  ORDER BY id DESC
+INSERT INTO Realm_usage (realmid, national_sn, international_sn, data, id) VALUES ('1', '13', '111', '2009-07-15', 1)
+
+POST /index.php/realm_usages/add
+
+SELECT * FROM Realm  
+SELECT id FROM Realm_usage  ORDER BY id DESC
+INSERT INTO Realm_usage (realmid, national_sn, international_sn, date, id) VALUES ('1', '13', '111', '2009-07-15', 1)
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+UPDATE Realm_usage SET realmid = '2', number_inst = '', number_user = '', number_id = '', number_IdP = '', number_SP = '', number_SPIdP = '', date = '2009-07-15' WHERE id = '1'
+
+GET /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+UPDATE Realm_usage SET realmid = '2', number_inst = '', number_user = '', number_id = '', number_IdP = '', number_SP = '', number_SPIdP = '', date = '2009-07-15' WHERE id = '1'
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+UPDATE Realm_usage SET realmid = '2', national_sn = '13', international_sn = '111', date = '2009-07-15' WHERE id = '1'
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+UPDATE Realm_usage SET realmid = '1', national_sn = '13', international_sn = '111', date = '2009-07-15' WHERE id = '1'
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+UPDATE Realm_usage SET realmid = '2', national_sn = '13', international_sn = '111', date = '2009-07-15' WHERE id = '1'
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_usages/add
+
+SELECT * FROM Realm  
