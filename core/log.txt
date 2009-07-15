@@ -3570,3 +3570,382 @@ SELECT * FROM service_loc
 GET /index.php/service_locs/
 
 SELECT * FROM service_loc  
+
+GET /index.php/service_locs/add
+
+SELECT * FROM Institution  
+
+POST /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+UPDATE service_loc SET institutionid = '1', longitude = '233524,96', latitude = '233524,96', loc_name = 'Caminul 7', address_city = 'Cluj-Napoca', contact_name = 'Stanislav Suscov', contact_email = 'stas@nerd.ro', contact_phone = '40765655963', SSID = 'eduroam', enc_level = 'WPA2/TKIP', port_restrict = '1', transp_proxy = '1', IPv6 = '0', NAT = '0', AP_no = '1', wired = '1', info_URL = 'http://intranet.c7obs.net', ts = '2009-07-10' WHERE id = '1'
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/
+
+
+POST /index.php/
+
+SELECT * FROM Users WHERE email = 'stas@nerd.ro' 
+
+GET /index.php/users/prefs
+
+
+GET /index.php/users/prefs
+
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/add
+
+
+GET /index.php/realm_datas/add
+
+
+GET /index.php/realm_datas/add
+
+SELECT * FROM Realm  
+
+GET /
+
+
+POST /
+
+SELECT * FROM Users WHERE email = 'stas@nerd.ro' 
+
+GET /index.php/users/prefs
+
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/add
+
+SELECT * FROM Realm  
+
+POST /index.php/realm_datas/add
+
+SELECT * FROM Realm  
+SELECT id FROM Realm_data  ORDER BY id DESC
+INSERT INTO Realm_data (realmid, number_inst, number_user, number_id, number_IdP, number_SP, number_SPIdP, ts, id) VALUES ('1', '1', '3000', '3000', '1', '2', '1', '2009-07-15', 1)
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/add
+
+
+POST /index.php/realms/add
+
+SELECT id FROM Realm  ORDER BY id DESC
+INSERT INTO Realm (country, stype, org_name, address_street, address_city, contact_name, contact_email, contact_phone, info_URL, policy_URL, ts, id) VALUES ('RO', '0', 'UAIC', 'Iasi, Universitatii', 'Iasi', 'Universitatea Alexandru Ioan Cuza', 'admin@uiac.ro', '40264401200', 'http://uaic.ro', 'http://uaic.ro', '2009-07-15', 2)
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+
+GET /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+
+GET /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+
+GET /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+
+GET /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+
+GET /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+
+POST /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+UPDATE Realm_data SET number_inst = '1', number_user = '3000', number_id = '3000', number_IdP = '1', number_SP = '2', number_SPIdP = '1', ts = '2009-07-15' WHERE id = '1'
+SELECT * FROM Realm_data WHERE id = '1' 
+
+GET /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+
+GET /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+
+POST /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+UPDATE Realm_data SET realmid = '2', number_inst = '1', number_user = '3000', number_id = '3000', number_IdP = '1', number_SP = '2', number_SPIdP = '1', ts = '2009-07-15' WHERE id = '1'
+SELECT * FROM Realm_data WHERE id = '1' 
+
+POST /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+UPDATE Realm_data SET realmid = '2', number_inst = '1', number_user = '30000', number_id = '3000', number_IdP = '1', number_SP = '2', number_SPIdP = '1', ts = '2009-07-15' WHERE id = '1'
+SELECT * FROM Realm_data WHERE id = '1' 
+
+POST /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+UPDATE Realm_data SET realmid = '1', number_inst = '1', number_user = '30000', number_id = '3000', number_IdP = '1', number_SP = '2', number_SPIdP = '1', ts = '2009-07-15' WHERE id = '1'
+SELECT * FROM Realm_data WHERE id = '1' 
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '1' 
+
+GET /index.php/realm_datas/add
+
+SELECT * FROM Realm  
+
+POST /index.php/realm_datas/add
+
+SELECT * FROM Realm  
+SELECT id FROM Realm_data  ORDER BY id DESC
+INSERT INTO Realm_data (realmid, number_inst, number_user, number_id, number_IdP, number_SP, number_SPIdP, ts, id) VALUES ('2', '1', '3000', '3000', '1', '2', '1', '2009-07-15', 2)
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/edit/2
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '2' 
+
+POST /index.php/realm_datas/edit/2
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '2' 
+UPDATE Realm_data SET realmid = '1', number_inst = '1', number_user = '3000', number_id = '3000', number_IdP = '1', number_SP = '2', number_SPIdP = '1', ts = '2009-07-15' WHERE id = '2'
+SELECT * FROM Realm_data WHERE id = '2' 
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/edit/2
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '2' 
+
+POST /index.php/realm_datas/edit/2
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data WHERE id = '2' 
+UPDATE Realm_data SET realmid = '2', number_inst = '1', number_user = '3000', number_id = '3000', number_IdP = '1', number_SP = '2', number_SPIdP = '1', ts = '2009-07-15' WHERE id = '2'
+SELECT * FROM Realm_data WHERE id = '2' 
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/realm_datas/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_data  
