@@ -4166,3 +4166,434 @@ SELECT * FROM Realm_usage
 GET /index.php/realm_usages/add
 
 SELECT * FROM Realm  
+
+GET /index.php/realm_usages/add
+
+SELECT * FROM Realm  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institutions_usages/add
+
+
+GET /index.php/institutions_usages/add
+
+
+GET /index.php/institutions_usages/add
+
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institutions_usages/add
+
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/add
+
+SELECT * FROM Institution  
+
+POST /index.php/institution_usages/add
+
+SELECT * FROM Institution  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/add
+
+SELECT * FROM Institution  
+
+POST /index.php/institution_usages/add
+
+SELECT * FROM Institution  
+SELECT id FROM Institution_usage  ORDER BY id DESC
+INSERT INTO Institution_usage (institutionid, national_sn, international_sn, date, id) VALUES ('1', '1232', '122332', '2009-07-15', 1)
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+UPDATE Realm_usage SET realmid = '1', national_sn = '13', international_sn = '111', date = '2009-07-15' WHERE id = '1'
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+UPDATE Realm_usage SET realmid = '2', national_sn = '13', international_sn = '111', date = '2009-07-15' WHERE id = '1'
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+UPDATE Realm_usage SET realmid = '2', national_sn = '132', international_sn = '111', date = '2009-07-15' WHERE id = '1'
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+UPDATE Realm_usage SET realmid = '1', national_sn = '132', international_sn = '111', date = '2009-07-15' WHERE id = '1'
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+UPDATE Realm_usage SET realmid = '1', national_sn = '13', international_sn = '111', date = '2009-07-15' WHERE id = '1'
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/realm_usages/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/realm_usages/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/institution_usages/
+
+SELECT * FROM Institution  
+SELECT * FROM Institution_usage  
+
+GET /index.php/mon_realms/
+
+
+GET /index.php/mon_realms/
+
+
+GET /index.php/mon_realms/
+
+
+GET /index.php/realm_usages/add
+
+SELECT * FROM Realm  
+
+GET /index.php/mon_realms/
+
+
+GET /index.php/mon_realms/add
+
+
+GET /index.php/mon_realms/add
+
+
+GET /index.php/mon_realms/add
+
+
+GET /index.php/mon_realms/add
+
+
+GET /index.php/mon_realms/add
+
+
+GET /index.php/mon_realms/add
+
+SELECT * FROM Realm  
+
+GET /index.php/mon_realms/add
+
+SELECT * FROM Realm  
+
+GET /index.php/mon_realms/add
+
+SELECT * FROM Realm  
+
+POST /index.php/mon_realms/add
+
+SELECT * FROM Realm  
+SELECT id FROM Mon_realm  ORDER BY id DESC
+INSERT INTO Mon_realm (tested_realm, tested_country, realmid, mon_type_sel, last_mon_logid, ts, id) VALUES ('eduroam', 'RO', '1', '10', '9', '2009-07-15', 1)
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage  
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+POST /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+UPDATE Realm_usage SET tested_realm = 'eduroam', tested_country = 'RO', realmid = '1', mon_type_sel = '10', last_mon_logid = '9', ts = '2009-07-15' WHERE id = '1'
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Realm_usage WHERE id = '1' 
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm WHERE id = '1' 
+
+POST /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm WHERE id = '1' 
+UPDATE Mon_realm SET tested_realm = 'eduroam', tested_country = 'RO', realmid = '1', mon_type_sel = '10', last_mon_logid = '9', ts = '2009-07-15' WHERE id = '1'
+SELECT * FROM Mon_realm WHERE id = '1' 
+
+POST /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm WHERE id = '1' 
+UPDATE Mon_realm SET tested_realm = 'eduroam', tested_country = 'RO', realmid = '1', mon_type_sel = '0', last_mon_logid = '9', ts = '2009-07-15' WHERE id = '1'
+SELECT * FROM Mon_realm WHERE id = '1' 
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm WHERE id = '1' 
+
+GET /index.php/mon_realms/add
+
+SELECT * FROM Realm  
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm WHERE id = '1' 
