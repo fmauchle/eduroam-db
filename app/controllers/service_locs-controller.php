@@ -1,0 +1,94 @@
+<?php
+    class service_locs_controller {
+        
+        function index() {
+            $s = new Service_loc();
+            pass_var("s", $s->find_all());
+            pass_var('title', "Service Locations Index");
+            pass_var('message', "List of Service Locations");
+        }
+        
+        function edit() {            
+            if($_POST["action"] == "addservice") {
+                global $runtime;
+                $data = $_POST;
+                unset($data["action"]);
+                unset($data["updaterealm"]);
+                $data["ts"] = date("Y-m-d");
+                $s = new Service_loc();
+                $s = $s->find_one_by_id($runtime['ident']);
+                $s->data = $data;
+                $s->dirty = array(
+                                    'institutionid',
+                                    'longitude',
+                                    'latitude',
+                                    'loc_name',
+                                    'address_city',
+                                    'contact_name',
+                                    'contact_email',
+                                    'contact_phone',
+                                    'SSID',
+                                    'enc_level',
+                                    'port_restrict',
+                                    'transp_proxy',
+                                    'IPv6',
+                                    'NAT',
+                                    'AP_no',
+                                    'wired',
+                                    'info_URL',
+                                    'ts'
+                                );
+                $s->save();
+                $s = $s->find_one_by_id($runtime['ident']);
+                pass_var("service", $s->data);
+            }
+            else {
+                global $runtime;
+                $s = new Service_loc();
+                $s = $s->find_one_by_id($runtime['ident']);
+                pass_var("service", $s->data);
+            }
+            
+            $i = new Institution();
+            $i = $i->find_all();
+            $insts = array();
+            foreach($i as $inst) {
+                $insts[$inst->id] = $inst->org_name;
+            }
+            
+            pass_var('ins', $insts);
+            pass_var('title', "Edit Realm");
+            pass_var('message', "Edit Realms");
+        }
+        
+        function add() {
+            if($_POST["action"] == "addservice") {
+                $data = $_POST;
+                unset($data["action"]);
+                unset($data["addservice"]);
+                $data["ts"] = date("Y-m-d");
+                $s = new Service_loc($data);
+                $s->save();
+            }
+            $i = new Institution();
+            $i = $i->find_all();
+            $insts = array();
+            foreach($i as $inst) {
+                $insts[$inst->id] = $inst->org_name;
+            }
+            
+            pass_var('ins', $insts);
+            pass_var('title', "Add Realm");
+            pass_var('message', "Add Realm");
+        }
+        
+        function delete() {
+            global $runtime;
+            $s = new Service_loc();
+            $s = $s->find_one_by_id($runtime['ident']);
+            $s->delete();
+            redirect('service_locs/');
+        }
+        
+    }
+?>
