@@ -4597,3 +4597,321 @@ GET /index.php/mon_realms/edit/1
 
 SELECT * FROM Realm  
 SELECT * FROM Mon_realm WHERE id = '1' 
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/realms/edit/2
+
+SELECT * FROM Realm WHERE id = '2' 
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/realms/
+
+SELECT * FROM Realm  
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/service_locs/
+
+SELECT * FROM service_loc  
+
+GET /index.php/service_locs/edit/1
+
+SELECT * FROM service_loc WHERE id = '1' 
+SELECT * FROM Institution  
+
+GET /index.php/institutions/
+
+SELECT * FROM Institution  
+
+GET /index.php/servicelocs/
+
+
+GET /index.php/
+
+
+POST /index.php/
+
+SELECT * FROM Users WHERE email = 'stas@nerd.ro' 
+
+GET /index.php/users/prefs
+
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm WHERE id = '1' 
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php
+
+
+POST /index.php
+
+SELECT * FROM Users WHERE email = 'stas@nerd.ro' 
+
+GET /index.php/users/prefs
+
+
+GET /index.php/mon_sers/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_sers/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_sers/add
+
+SELECT * FROM Realm  
+
+GET /index.php/mon_sers/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_realms/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm  
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm WHERE id = '1' 
+
+GET /index.php/mon_sers/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_sers/add
+
+SELECT * FROM Realm  
+
+GET /index.php/mon_sers/add
+
+SELECT * FROM Realm  
+
+POST /index.php/mon_sers/add
+
+SELECT * FROM Realm  
+SELECT id FROM Mon_ser  ORDER BY id DESC
+INSERT INTO Mon_ser (name, mon_realmid, ip, port, timeout, retry, secret, stype, reject_only, radsec, monitoring, last_mon_logid, ts, id) VALUES ('bavaria.utcluj.ro', '1', '193.226.5.35', '1812', '100', '3', 'sup3rsecret', '0', '0', '0', '-1', '1', '2009-07-21', 1)
+
+GET /index.php/mon_sers/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_sers/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_sers/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm WHERE id = '1' 
+
+GET /index.php/mon_realms/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_realm WHERE id = '1' 
+
+GET /index.php/mon_sers/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+POST /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+UPDATE Mon_ser SET tested_realm = '', tested_country = '', realmid = '', mon_type_sel = '', last_mon_logid = '1', ts = '2009-07-21' WHERE id = '1'
+
+POST /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+UPDATE Mon_ser SET name = 'bavaria.utcluj.ro', mon_realmid = '2', ip = '193.226.5.35', port = '1812', timeout = '100', retry = '3', secret = 'sup3rsecret', stype = '0', reject_only = '1', radsec = '1', monitoring = '0', last_mon_logid = '1', ts = '2009-07-21' WHERE id = '1'
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+POST /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+UPDATE Mon_ser SET name = 'bavaria.utcluj.ro', mon_realmid = '2', ip = '193.226.5.35', port = '1812', timeout = '100', retry = '3', secret = 'sup3rsecret', stype = '0', reject_only = '1', radsec = '1', monitoring = '0', last_mon_logid = '1', ts = '2009-07-21' WHERE id = '1'
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+POST /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+UPDATE Mon_ser SET name = 'bavaria.utcluj.roo', mon_realmid = '1', ip = '193.226.5.35', port = '1812', timeout = '100', retry = '3', secret = 'sup3rsecret', stype = '0', reject_only = '0', radsec = '0', monitoring = '0', last_mon_logid = '1', ts = '2009-07-21' WHERE id = '1'
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+POST /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+UPDATE Mon_ser SET name = 'bavaria.utcluj.ro', mon_realmid = '1', ip = '193.226.5.35', port = '1812', timeout = '100', retry = '3', secret = 'sup3rsecret', stype = '0', reject_only = '0', radsec = '0', monitoring = '0', last_mon_logid = '1', ts = '2009-07-21' WHERE id = '1'
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+POST /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+UPDATE Mon_ser SET name = 'bavaria.utcluj.ro', mon_realmid = '1', ip = '193.226.5.35', port = '1812', timeout = '100', retry = '3', secret = 'sup3rsecret', stype = '0', reject_only = '1', radsec = '1', monitoring = '0', last_mon_logid = '1', ts = '2009-07-21' WHERE id = '1'
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+POST /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+UPDATE Mon_ser SET name = 'bavaria.utcluj.ro', mon_realmid = '1', ip = '193.226.5.35', port = '1812', timeout = '100', retry = '3', secret = 'sup3rsecret', stype = '0', reject_only = '1', radsec = '0', monitoring = '0', last_mon_logid = '1', ts = '2009-07-21' WHERE id = '1'
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+POST /index.php/mon_sers/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser WHERE id = '1' 
+UPDATE Mon_ser SET name = 'bavaria.utcluj.ro', mon_realmid = '1', ip = '193.226.5.35', port = '1812', timeout = '100', retry = '3', secret = 'sup3rsecret', stype = '1', reject_only = '1', radsec = '1', monitoring = '0', last_mon_logid = '1', ts = '2009-07-21' WHERE id = '1'
+SELECT * FROM Mon_ser WHERE id = '1' 
+
+GET /index.php/mon_sers/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  

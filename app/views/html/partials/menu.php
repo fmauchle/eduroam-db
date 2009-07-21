@@ -6,5 +6,6 @@
 	<li><?php echo getLink("Realm Usage", "realm_usages/") ?></li>
 	<li><?php echo getLink("Institution Usage", "institution_usages/") ?></li>
 	<li><?php echo getLink("Realms Monitor", "mon_realms/") ?></li>
+	<li><?php echo getLink("Monitored Servers", "mon_sers/") ?></li>
 	<li><?php echo getLink("Logout", "users/logout") ?></li>
 </ul>
