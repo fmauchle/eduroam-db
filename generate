@@ -6,6 +6,14 @@ switch($_SERVER['argv'][1]) {
   case 'models':
     generate_models();
     break;
+
+  case 'model':
+    generate_model($_SERVER['argv'][2]);
+    break;
+
+  case 'view':
+    make_views($_SERVER['argv'][2]);
+    break;
     
   case 'controller':
     generate_controller($_SERVER['argv'][2]);
@@ -26,7 +34,9 @@ function show_instructions() {
   echo "
 models            - create a skeletal model file for each table in database
 model      [name] - create a skeletal model file named [name]
-controller [name] - create a skeletal controller file named [controller]
+controller [name] - create a skeletal controller file named [name]
+view       [name] - create a skeletal view file named [name]
+sql               - run sql
 delgreet          - delete all files associated with the greeting\n\n";
 }
 function generate_models() {

@@ -4915,3 +4915,261 @@ GET /index.php/mon_sers/
 
 SELECT * FROM Realm  
 SELECT * FROM Mon_ser  
+
+GET /index.php/mon_sers/
+
+
+GET /index.php/mon_sers/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_sers/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_sers/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+
+GET /index.php/mon_ser_logs/add
+
+SELECT * FROM Realm  
+
+GET /index.php/mon_ser_logs/add
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/add
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/add
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/add
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+
+POST /index.php/mon_ser_logs/add
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT id FROM Mon_ser_log  ORDER BY id DESC
+INSERT INTO Mon_ser_log (mon_serid, mon_type, status, a_resp_time, r_resp_time, mon_logid, ts, id) VALUES ('1', '1', '0', '100', '100', '1', '2009-07-21', 1)
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+POST /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+UPDATE Mon_ser_log SET name = '', mon_realmid = '', ip = '', port = '', timeout = '', retry = '', secret = '', stype = '', reject_only = '', radsec = '', monitoring = '', last_mon_logid = '', ts = '2009-07-21' WHERE id = '1'
+
+POST /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+UPDATE Mon_ser_log SET mon_serid = '1', mon_type = '1', status = '0', a_resp_time = '100', r_resp_time = '100', mon_logid = '1000', ts = '2009-07-21' WHERE id = '1'
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+POST /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+UPDATE Mon_ser_log SET mon_serid = '1', mon_type = '0', status = '-2', a_resp_time = '100', r_resp_time = '100', mon_logid = '1000', ts = '2009-07-21' WHERE id = '1'
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/edit/1
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser  
+SELECT * FROM Mon_ser_log WHERE id = '1' 
+
+GET /index.php/mon_ser_logs/
+
+SELECT * FROM Realm  
+SELECT * FROM Mon_ser_log  
+SELECT * FROM Mon_ser  
