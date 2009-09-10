@@ -1,0 +1,10 @@
+<?php
+$config = array(
+  'database' => 'db/eduroam.db',
+  'base_url' => 'http://',
+  'enable_mod_rewrite' => false,
+  //'error_reporting' => E_WARNING,
+  'keep_log' => true,
+  'debug' => true
+);
+?>
