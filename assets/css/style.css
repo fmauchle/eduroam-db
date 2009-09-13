@@ -1,5 +1,5 @@
 /**
- * Eduroam v1
+ * Eduroam-DB
  * May, 2009
  * Stas SUSHKOV (stas@net.utcluj.ro)
  */
@@ -21,9 +21,12 @@ input {font-size: 14px; padding: 0 2px}
 #main { padding: 10px; }
 #main ul { list-style-type: none; padding-left: 0; }
 #main ul li { margin: 15px 0; }
-ul.menu li { display: inline; padding: 0 3px;}
-ul.submenu {margin-top: 5px;}
-ul.submenu li { display: inline; padding: 0 3px;}
+ul.menu { border-bottom: 1px solid #ccc; text-align: left; padding-bottom: 4px; font-size: 14px; }
+ul.menu li { display: inline; padding: 2px 5px; background-color: #eee; border-right: 1px solid #ddd;}
+ul.menu li a { text-decoration: none; }
+ul.submenu {text-align: right; margin-top: 1px; }
+ul.submenu li { display: inline; padding: 0px 4px; background-color: #eee; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd; }
+ul.submenu li a { text-decoration: none; }
 #allinstitutions h4 {display: inline}
 small {font-size: 70%;}
 #footer { border-top: 1px solid #5D7D80; margin-bottom: 20px; text-align: right; font-size: 80%; clear: both;}
