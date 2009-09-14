@@ -3,11 +3,11 @@
         
         function index() {
             $realms = new Realm();
-            $m = new Mon_realm();
+            $m = new Mon_cred();
             pass_var("realms", $realms->find_all());
             pass_var("m", $m->find_all());
-            pass_var('title', "Monitor Realm Index");
-            pass_var('message', "List of Monitor Realm");
+            pass_var('title', "Monitor Credentials Index");
+            pass_var('message', "List of Monitor Credentials");
         }
         
         function add() {
@@ -18,25 +18,24 @@
                 $rids[$realm->id] = $realm->org_name;
             }
             
-            if($_POST["action"] == "addmonrealm") {
+            if($_POST["action"] == "addmoncred") {
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["addmonrealm"]);
-                $data["ts"] = date("Y-m-d");
-                $m = new Mon_realm($data);
+                $m = new Mon_cred($data);
                 $m->save();
             }
             pass_var("rids",$rids);
-            pass_var('title', "Add Monitor Realm");
-            pass_var('message', "Add Monitor Realm");
+            pass_var('title', "Add Monitor Credential");
+            pass_var('message', "Add Monitor Credential");
         }
         
         function delete() {
             global $runtime;
-            $i = new Mon_realm();
+            $i = new Mon_cred();
             $i = $i->find_one_by_id($runtime['ident']);
             $i->delete();
-            redirect('mon_realms/');
+            redirect('mon_creds/');
         }
         
         function edit() {
@@ -47,32 +46,28 @@
                 $rids[$realm->id] = $realm->org_name;
             }
             
-            if($_POST["action"] == "updatemonrealm") {
+            if($_POST["action"] == "updatemoncred") {
                 global $runtime;
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["updatemonrealm"]);
-                $data["ts"] = date("Y-m-d");
-                $m = new Mon_realm();
+                $m = new Mon_cred();
                 $m = $m->find_one_by_id($runtime['ident']);
                 $m->data = $data;
                 $m->dirty = array(
-                                    'tested_realm',
-                                    'tested_country',
-                                    'realmid',
-                                    'mon_type_sel',
-                                    'last_mon_logid',
-                                    'ts'
+                                    'username',
+                                    'password',
+                                    'mon_realmid'
                                 );
                 $m->save();
                 $m = $m->find_one_by_id($runtime['ident']);
-                pass_var("monr", $m->data);
+                pass_var("monc", $m->data);
             }
             else {
                 global $runtime;
-                $m = new Mon_realm();
+                $m = new Mon_cred();
                 $m = $m->find_one_by_id($runtime['ident']);
-                pass_var("monr", $m->data);
+                pass_var("monc", $m->data);
             }
             
             pass_var("rids",$rids);

@@ -13,7 +13,6 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["addmonlog"]);
-                $data["ts"] = date("Y-m-d");
                 $m = new Mon_log($data);
                 $m->save();
             }
@@ -40,12 +39,12 @@
                 $m = $m->find_one_by_id($runtime['ident']);
                 $m->data = $data;
                 $m->dirty = array(
-                                    'tested_realm',
-                                    'tested_country',
-                                    'realmid',
-                                    'mon_type_sel',
-                                    'last_mon_logid',
-                                    'ts'
+                                    'scheduled',
+                                    'ts_scheduled',
+                                    'ts_start',
+                                    'ts_end',
+                                    'type',
+                                    'status'
                                 );
                 $m->save();
                 $m = $m->find_one_by_id($runtime['ident']);

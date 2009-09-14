@@ -2,7 +2,7 @@
 	<?php load_partial("menu"); ?>
 	<?php load_partial("mon_logs_submenu"); ?>
 </div>
-<div id="monrealm">
+<div id="monlogs">
 	<form action="" method="post" onsubmit="this.addmonlog.disabled=true;">
 		<input type="hidden" name="action" value="addmonlog" />
 		<label for="scheduled">Scheduling:</label>
@@ -39,7 +39,7 @@
 				?>
 			</select>
 		<label for="type">Status:</label>
-			<select name="type">
+			<select name="status">
 				<?php
 					$statuses = array(
 						'0' => 'END',

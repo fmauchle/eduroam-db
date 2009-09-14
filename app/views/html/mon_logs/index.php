@@ -6,17 +6,13 @@
     <ol>
     <?php 
 	if(!empty($m))
-		foreach($m as $monr) {
-			foreach($realms as $realm) {
-				if($realm->data['id'] == $monr->realmid)
-					$realm_name = $realm->data['org_name'];
-			}
+		foreach($m as $monl) {
 			echo "<li><span class=\"delete\">";
-			echo getLink("X", "mon_realms/delete/".$monr->id);
+			echo getLink("X", "mon_logs/delete/".$monl->id);
 			echo "</span>";
 			echo " | ";
 			echo "<strong>";
-			echo getLink($realm_name, "mon_realms/edit/".$monr->id);
+			echo getLink($monl->ts_scheduled, "mon_logs/edit/".$monl->id);
 			echo "</strong></li>";
 		}
 	?>
