@@ -5,13 +5,9 @@
 <div id="institution">
 	<form action="" method="post" onsubmit="this.updateinst.disabled=true;">
 		<label for="realmid">Institution realm</label>
-		    <select name="realmid" >
-                        <?php
-                            foreach($rids as $i => $rid) {
-                                echo "<option value=\"$i\" >$rid</option>";
-                            }
-                        ?>
-                    </select>
+		<?php
+			echo select_tag($rids, 'realmid');
+                ?>
 		<label for="type">Type:</label>
 			<select name="type">
 				<option value="1" <?php if($institution["type"] == 1) echo'selected=\"selected\"'; ?>>idP</option>

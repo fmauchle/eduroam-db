@@ -6,14 +6,9 @@
 	<form action="" method="post" onsubmit="this.updateinst.disabled=true;">
 		<input type="hidden" name="action" value="addservice" />
 		<label for="institutionid">Institution it belongs</label>
-		    <select name="institutionid" >
-                        <?php
-                        
-                            foreach($ins as $i => $id) {
-                                echo "<option value=\"$i\" >$id</option>";
-                            }
-                        ?>
-                    </select>
+		<?php
+			echo select_tag($ins, 'institutionid');
+                ?>
 		<label for="longitude">Longitude</label>
 			<input type="text" name="longitude" />
 		<label for="latitude">Latitude</label>

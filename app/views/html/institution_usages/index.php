@@ -12,11 +12,11 @@
 					$inst_name = $inst->data['org_name'];
 			}
 			echo "<li><span class=\"delete\">";
-			echo getLink("X", "realm_usages/delete/".$instu->id);
+			echo getLink("X", "institution_usages/delete/".$instu->id);
 			echo "</span>";
 			echo " | ";
 			echo "<strong>";
-			echo getLink($inst_name, "realm_usages/edit/".$instu->id);
+			echo getLink($inst_name, "institution_usages/edit/".$instu->id);
 			echo "</strong></li>";
 		}
 	?>

@@ -31,7 +31,7 @@
                         ?>
                     </select>
 		<label for="last_mon_logid">ID of The Last Successful Monitoring Job</label>
-			<input type="text" name="last_mon_logid" />
+			<?php echo select_tag($mls, 'last_mon_logid'); ?>
 		<p>
 			<input type="submit" name="addmonrealm" value="Add">
 		</p>

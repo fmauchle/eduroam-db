@@ -6,16 +6,9 @@
 	<form action="" method="post" onsubmit="this.updaterealmusage.disabled=true;">
 		<input type="hidden" name="action" value="updaterealmusage" />
 		<label for="realmid">ID of Representative Realm</label>
-		    <select name="realmid" >
-                        <?php
-                            foreach($rids as $i => $rid) {
-                                if($realmd['realmid'] == $i)
-                                    echo "<option value=\"$i\" selected=\"selected\" >$rid</option>";
-                                else
-                                    echo "<option value=\"$i\" >$rid</option>";
-                            }
-                        ?>
-                    </select>
+		<?php
+			echo select_tag($rids, 'realmid', $realmd['realmid']);
+                ?>
 		<label for="national_sn">Number of Successfully Authenticated Sessions per Day (National level)</label>
 			<input type="text" name="national_sn" value="<?php echo $realmd['national_sn'] ?>" />
 		<label for="international_sn">Number of Successfully Authenticated Sessions per Day (International level)</label>

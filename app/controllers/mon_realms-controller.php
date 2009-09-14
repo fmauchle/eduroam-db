@@ -13,20 +13,31 @@
         function add() {
             $r = new Realm();
             $r = $r->find_all();
+            
+            $ml = new Mon_log();
+            $ml = $ml->find_all();
+            
             $rids = array();
             foreach($r as $realm) {
                 $rids[$realm->id] = $realm->org_name;
+            }
+            
+            $mls = array();
+            foreach($ml as $m) {
+                $mls[$m->id] = $m->ts_scheduled;
             }
             
             if($_POST["action"] == "addmonrealm") {
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["addmonrealm"]);
-                $data["ts"] = date("Y-m-d");
+                $data["ts"] = date("c"); // Let's store directly ISO 860 timestamps
                 $m = new Mon_realm($data);
                 $m->save();
             }
+            
             pass_var("rids",$rids);
+            pass_var("mls",$mls);
             pass_var('title', "Add Monitor Realm");
             pass_var('message', "Add Monitor Realm");
         }
@@ -42,9 +53,18 @@
         function edit() {
             $r = new Realm();
             $r = $r->find_all();
+            
+            $ml = new Mon_log();
+            $ml = $ml->find_all();
+            
             $rids = array();
             foreach($r as $realm) {
                 $rids[$realm->id] = $realm->org_name;
+            }
+            
+            $mls = array();
+            foreach($ml as $m) {
+                $mls[$m->id] = $m->ts_scheduled;
             }
             
             if($_POST["action"] == "updatemonrealm") {
@@ -52,7 +72,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["updatemonrealm"]);
-                $data["ts"] = date("Y-m-d");
+                $data["ts"] = date("c"); // Let's store directly ISO 860 timestamps
                 $m = new Mon_realm();
                 $m = $m->find_one_by_id($runtime['ident']);
                 $m->data = $data;
@@ -76,6 +96,7 @@
             }
             
             pass_var("rids",$rids);
+            pass_var("mls",$mls);
             pass_var('title', "Edit Monitor Realm");
             pass_var('message', "Edit Monitor Realm");
         }

@@ -8,6 +8,14 @@
             pass_var("message", "Manage Institutions");
         }
         
+        function xml() {
+            global $runtime;
+            $runtime['format'] = 'xml';
+            $i = new Institution();
+            pass_var("ins", $i->find_all());
+            load_view('xml');
+        }
+        
         function add() {
             $r = new Realm();
             $r = $r->find_all();
@@ -17,7 +25,7 @@
             }
             
             if(!empty($_POST)) {
-                $_POST["ts"] = date("Y-m-d");
+                $_POST["ts"] = date("c");
                 $i = new Institution($_POST);
                 $i->save();
             }
@@ -45,7 +53,7 @@
             }
             
             if(!empty($_POST)) {
-                $_POST["ts"] = date("Y-m-d");
+                $_POST["ts"] = date("c");
                 $i = new Institution();
                 $i = $i->find_one_by_id($runtime['ident']);
                 $i->data = $_POST;

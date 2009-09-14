@@ -6,13 +6,9 @@
 	<form action="" method="post" onsubmit="this.addinstusage.disabled=true;">
 		<input type="hidden" name="action" value="addinstusage" />
 		<label for="institutionid">ID of Representative Realm</label>
-		    <select name="institutionid" >
-                        <?php
-                            foreach($insts as $i => $iid) {
-                                echo "<option value=\"$i\" >$iid</option>";
-                            }
-                        ?>
-                    </select>
+		<?php
+			echo select_tag($insts, 'institutionid');
+                ?>
 		<label for="local_sn">Number of Successfully Authenticated Sessions per Day (Local Level)</label>
 			<input type="text" name="national_sn" />
 		<label for="national_sn">Number of Successfully Authenticated Sessions per Day (National Level)</label>

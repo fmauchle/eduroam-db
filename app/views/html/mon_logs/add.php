@@ -18,11 +18,11 @@
                         ?>
                     </select>
 		<label for="ts_scheduled">Scheduled time</label>
-			<input type="text" name="ts_scheduled" />
+			<input type="text" name="ts_scheduled" class="calendar" />
 		<label for="ts_start">Start time</label>
-			<input type="text" name="ts_start" />
+			<input type="text" name="ts_start" class="calendar" />
 		<label for="ts_end">End time</label>
-			<input type="text" name="ts_end" />
+			<input type="text" name="ts_end" class="calendar" />
 		<label for="type">Job types:</label>
 			<select name="type">
 				<?php

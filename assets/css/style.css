@@ -12,7 +12,7 @@ a:visited { color: #666; }
 a:hover {text-decoration: none;}
 h3 a {text-decoration: none;}
 p {margin: 10px 0; line-height: 14px; padding: 5px 0;}
-label {display: block; font-size: 14px;}
+label {display: block; font-size: 14px; line-height: 20px;}
 input {font-size: 14px; padding: 0 2px}
 #content { width: 700px; margin: 30px auto; }
 #header { border-bottom: 1px solid #5D7D80; }

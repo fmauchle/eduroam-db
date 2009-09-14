@@ -13,30 +13,32 @@
         }
         
         function add() {
-            $r = new Realm();
-            $r = $r->find_all();
-            $rids = array();
-            foreach($r as $realm) {
-                $rids[$realm->id] = $realm->org_name;
+            $ml = new Mon_log();
+            $ml = $ml->find_all();
+            
+            $ms = new Mon_ser();
+            $ms = $ms->find_all();
+            
+            $mls = array();
+            foreach($ml as $m) {
+                $mls[$m->id] = $m->ts_scheduled;
             }
             
-            $m = new Mon_ser();
-            $m = $m->find_all();
-            $ms = array();
-            foreach($m as $mon) {
-                $ms[$mon->id] = $mon->name;
+            $mons = array();
+            foreach($ms as $mon) {
+                $mons[$mon->id] = $mon->name;
             }
             
             if($_POST["action"] == "addmonserlog") {
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["addmonserlog"]);
-                $data["ts"] = date("Y-m-d");
+                $data["ts"] = date("c"); // Let's store directly ISO 860 timestamps
                 $m = new Mon_ser_log($data);
                 $m->save();
             }
-            pass_var("rids",$rids);
             pass_var("mons",$mons);
+            pass_var("mls",$mls);
             pass_var('title', "Add a monitored server log");
             pass_var('message', "Add a monitored server log");
         }
@@ -50,15 +52,17 @@
         }
         
         function edit() {
-            $r = new Realm();
-            $r = $r->find_all();
-            $rids = array();
-            foreach($r as $realm) {
-                $rids[$realm->id] = $realm->org_name;
-            }
+            $ml = new Mon_log();
+            $ml = $ml->find_all();
             
             $ms = new Mon_ser();
             $ms = $ms->find_all();
+            
+            $mls = array();
+            foreach($ml as $m) {
+                $mls[$m->id] = $m->ts_scheduled;
+            }
+            
             $mons = array();
             foreach($ms as $mon) {
                 $mons[$mon->id] = $mon->name;
@@ -69,7 +73,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["updatemonserlog"]);
-                $data["ts"] = date("Y-m-d");
+                $data["ts"] = date("c"); // Let's store directly ISO 860 timestamps
                 $m = new Mon_ser_log();
                 $m = $m->find_one_by_id($runtime['ident']);
                 $m->data = $data;
@@ -93,7 +97,7 @@
                 pass_var("mons", $m->data);
             }
             
-            pass_var("rids",$rids);
+            pass_var("mls",$mls);
             pass_var("ms",$mons);
             pass_var('title', "Edit monitored server log");
             pass_var('message', "Edit monitored server log");

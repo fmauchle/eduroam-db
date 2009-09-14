@@ -6,15 +6,11 @@
 	<form action="" method="post" onsubmit="this.updateinstusage.disabled=true;">
 		<input type="hidden" name="action" value="updateinstusage" />
 		<label for="institutionid">ID of Representative Realm</label>
-		    <select name="institutionid" >
-                        <?php
-                            foreach($insts as $i => $iid) {
-                                echo "<option value=\"$i\" >$iid</option>";
-                            }
-                        ?>
-                    </select>
+		<?php
+			echo select_tag($insts, 'institutionid', $instu['institutionid']);
+                ?>
 		<label for="local_sn">Number of Successfully Authenticated Sessions per Day (Local Level)</label>
-			<input type="text" name="national_sn" value="<?php echo $instu['local_sn'] ?>" />
+			<input type="text" name="local_sn" value="<?php echo $instu['local_sn'] ?>" />
 		<label for="national_sn">Number of Successfully Authenticated Sessions per Day (National level)</label>
 			<input type="text" name="national_sn" value="<?php echo $instu['national_sn'] ?>" />
 		<label for="international_sn">Number of Successfully Authenticated Sessions per Day (International level)</label>

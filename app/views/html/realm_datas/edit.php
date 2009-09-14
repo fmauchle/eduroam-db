@@ -3,19 +3,15 @@
 	<?php load_partial("realm_datas_submenu"); ?>
 </div>
 <div id="realm">
+	<p class="splash">
+		Last modification timestamp is: <?php echo $realmd['ts']; ?>
+	</p>
 	<form action="" method="post" onsubmit="this.updaterealm.disabled=true;">
 		<input type="hidden" name="action" value="updaterealmdata" />
 		<label for="realmid">ID of Representative Realm</label>
-		    <select name="realmid" >
-                        <?php
-                            foreach($rids as $i => $rid) {
-                                if($realmd['realmid'] == $i)
-                                    echo "<option value=\"$i\" selected=\"selected\" >$rid</option>";
-                                else
-                                    echo "<option value=\"$i\" >$rid</option>";
-                            }
-                        ?>
-                    </select>
+		<?php
+			echo select_tag($rids, 'realmid', $realmd['realmid']);
+                ?>
 		<label for="number_inst">Number of institutions eligible to participate</label>
 			<input type="text" name="number_inst" value="<?php echo $realmd['number_inst'] ?>" />
 		<label for="number_user">Number of users eligible to participate</label>

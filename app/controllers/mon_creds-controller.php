@@ -11,11 +11,11 @@
         }
         
         function add() {
-            $r = new Realm();
+            $r = new Mon_realm();
             $r = $r->find_all();
             $rids = array();
             foreach($r as $realm) {
-                $rids[$realm->id] = $realm->org_name;
+                $rids[$realm->id] = $realm->tested_realm;
             }
             
             if($_POST["action"] == "addmoncred") {
@@ -39,11 +39,11 @@
         }
         
         function edit() {
-            $r = new Realm();
+            $r = new Mon_realm();
             $r = $r->find_all();
             $rids = array();
             foreach($r as $realm) {
-                $rids[$realm->id] = $realm->org_name;
+                $rids[$realm->id] = $realm->tested_realm;
             }
             
             if($_POST["action"] == "updatemoncred") {

@@ -5,8 +5,8 @@
 <div id="realms">
     <ol id="allrealms">
     <?php 
-	if(!empty($r))
-		foreach($r as $realmd) {
+	if(!empty($rus))
+		foreach($rus as $realmd) {
 			foreach($realms as $realm) {
 				if($realm->data['id'] == $realmd->realmid)
 					$realm_name = $realm->data['org_name'];

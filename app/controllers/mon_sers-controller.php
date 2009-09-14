@@ -11,22 +11,32 @@
         }
         
         function add() {
-            $r = new Realm();
+            $r = new Mon_realm();
             $r = $r->find_all();
+            
+            $ml = new Mon_log();
+            $ml = $ml->find_all();
+            
             $rids = array();
             foreach($r as $realm) {
-                $rids[$realm->id] = $realm->org_name;
+                $rids[$realm->id] = $realm->tested_realm;
+            }
+            
+            $mls = array();
+            foreach($ml as $m) {
+                $mls[$m->id] = $m->ts_scheduled;
             }
             
             if($_POST["action"] == "addmonser") {
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["addmonser"]);
-                $data["ts"] = date("Y-m-d");
+                $data["ts"] = date("c"); // Let's store directly ISO 860 timestamps
                 $m = new Mon_ser($data);
                 $m->save();
             }
             pass_var("rids",$rids);
+            pass_var("mls",$mls);
             pass_var('title', "Add a monitored server");
             pass_var('message', "Add a monitored server");
         }
@@ -40,11 +50,20 @@
         }
         
         function edit() {
-            $r = new Realm();
+            $r = new Mon_realm();
             $r = $r->find_all();
+            
+            $ml = new Mon_log();
+            $ml = $ml->find_all();
+            
             $rids = array();
             foreach($r as $realm) {
-                $rids[$realm->id] = $realm->org_name;
+                $rids[$realm->id] = $realm->tested_realm;
+            }
+            
+            $mls = array();
+            foreach($ml as $m) {
+                $mls[$m->id] = $m->ts_scheduled;
             }
             
             if($_POST["action"] == "updatemonser") {
@@ -52,7 +71,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["updatemonser"]);
-                $data["ts"] = date("Y-m-d");
+                $data["ts"] = date("c"); // Let's store directly ISO 860 timestamps
                 $m = new Mon_ser();
                 $m = $m->find_one_by_id($runtime['ident']);
                 $m->data = $data;
@@ -83,6 +102,7 @@
             }
             
             pass_var("rids",$rids);
+            pass_var("mls",$mls);
             pass_var('title', "Edit monitored server");
             pass_var('message', "Edit monitored server");
         }

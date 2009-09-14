@@ -12,11 +12,11 @@ function html_options($options='') {
 function select_tag($items,$name,$selected=NULL,$options='') {
   $final = '';
   $final .= "<select name='$name' ".html_options($options).">\n";
-  foreach($items as $item) {
-    if($item == $selected) {
-      $final .= "<option value='$item' selected>$item</option>\n";
+  foreach($items as $key=>$item) {
+    if($key == $selected) {
+      $final .= "<option value='$key' selected>$item</option>\n";
     } else {
-      $final .= "<option value='$item'>$item</option>\n";
+      $final .= "<option value='$key'>$item</option>\n";
     }
   }
   $final .= "</select>\n";

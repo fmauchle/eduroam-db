@@ -14,7 +14,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["updaterealm"]);
-                $data["ts"] = date("Y-m-d");
+                $data["ts"] = date("c"); // Let's store directly ISO 860 timestamps
                 $s = new Service_loc();
                 $s = $s->find_one_by_id($runtime['ident']);
                 $s->data = $data;
@@ -66,7 +66,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["addservice"]);
-                $data["ts"] = date("Y-m-d");
+                $data["ts"] = date("c"); // Let's store directly ISO 860 timestamps
                 $s = new Service_loc($data);
                 $s->save();
             }

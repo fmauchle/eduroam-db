@@ -13,6 +13,9 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["addmonlog"]);
+                $data['ts_scheduled'] .= date('P');
+                $data['ts_start'] .= date('P');
+                $data['ts_end'] .= date('P');
                 $m = new Mon_log($data);
                 $m->save();
             }
@@ -34,7 +37,6 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["updatemonlog"]);
-                $data["ts"] = date("Y-m-d");
                 $m = new Mon_log();
                 $m = $m->find_one_by_id($runtime['ident']);
                 $m->data = $data;
@@ -48,12 +50,20 @@
                                 );
                 $m->save();
                 $m = $m->find_one_by_id($runtime['ident']);
+                // Small hacks to get the date usable
+                $m->data['ts_scheduled'] = substr($m->data['ts_scheduled'], 0, 16);
+                $m->data['ts_start'] = substr($m->data['ts_start'], 0, 16);
+                $m->data['ts_end'] = substr($m->data['ts_end'], 0, 16);
                 pass_var("monl", $m->data);
             }
             else {
                 global $runtime;
                 $m = new Mon_log();
                 $m = $m->find_one_by_id($runtime['ident']);
+                // Small hacks to get the date usable
+                $m->data['ts_scheduled'] = substr($m->data['ts_scheduled'], 0, 16);
+                $m->data['ts_start'] = substr($m->data['ts_start'], 0, 16);
+                $m->data['ts_end'] = substr($m->data['ts_end'], 0, 16);
                 pass_var("monl", $m->data);
             }
             

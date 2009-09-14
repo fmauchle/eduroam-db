@@ -6,13 +6,9 @@
 	<form action="" method="post" onsubmit="this.updaterealm.disabled=true;">
 		<input type="hidden" name="action" value="addrealmdata" />
 		<label for="realmid">ID of Representative Realm</label>
-		    <select name="realmid" >
-                        <?php
-                            foreach($rids as $i => $rid) {
-                                echo "<option value=\"$i\" >$rid</option>";
-                            }
-                        ?>
-                    </select>
+		<?php
+			echo select_tag($rids, 'realmid');
+                ?>
 		<label for="number_inst">Number of institutions eligible to participate</label>
 			<input type="text" name="number_inst" />
 		<label for="number_user">Number of users eligible to participate</label>

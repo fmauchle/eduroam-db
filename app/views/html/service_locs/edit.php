@@ -3,20 +3,15 @@
 	<?php load_partial("service_locs_submenu"); ?>
 </div>
 <div id="service">
+	<p class="splash">
+		Last modification timestamp is: <?php echo $service['ts']; ?>
+	</p>
 	<form action="" method="post" onsubmit="this.updateinst.disabled=true;">
 		<input type="hidden" name="action" value="addservice" />
 		<label for="institutionid">Institution it belongs</label>
-		    <select name="institutionid" >
-                        <?php
-                        
-                            foreach($ins as $i => $id) {
-                                if($service['institutionid'] == $i)
-                                    echo "<option value=\"$i\" selected=\"selected\" >$id</option>";
-                                else
-                                    echo "<option value=\"$i\" >$id</option>";
-                            }
-                        ?>
-                    </select>
+		<?php
+			echo select_tag($ins, 'institutionid', $service['institutionid']);
+                ?>
 		<label for="longitude">Longitude</label>
 			<input type="text" name="longitude" value="<?php echo $service['longitude'] ?>" />
 		<label for="latitude">Latitude</label>

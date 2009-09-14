@@ -8,13 +8,9 @@
 		<label for="name">Server's (host)name</label>
 			<input type="text" name="name" />
 		<label for="mon_realmid">ID of Monitored Realm</label>
-		    <select name="mon_realmid" >
-                        <?php
-                            foreach($rids as $i => $rid) {
-                                echo "<option value=\"$i\" >$rid</option>";
-                            }
-                        ?>
-                    </select>
+                    <?php
+                        echo select_tag($rids, 'mon_realmid');
+                    ?>
 		<label for="ip">Server's IP</label>
 			<input type="text" name="ip" />
 		<label for="port">Server's port</label>
@@ -46,7 +42,9 @@
 				<option value="0" >Yes (default)</option>
 			</select>
 		<label for="last_mon_logid">ID of The Last Successful Monitoring Job</label>
-			<input type="text" name="last_mon_logid" />
+                    <?php
+                        echo select_tag($mls, 'last_mon_logid');
+                    ?>
 		<p>
 			<input type="submit" name="addmonser" value="Add">
 		</p>

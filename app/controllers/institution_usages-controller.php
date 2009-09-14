@@ -10,6 +10,14 @@
             pass_var('message', "List of Institution Usage");
         }
         
+        function xml() {
+            global $runtime;
+            $runtime['format'] = 'xml';
+            $i = new Institution_usage();
+            pass_var("ins", $i->find_all());
+            load_view('xml');
+        }
+        
         function add() {
             $i = new Institution();
             $i = $i->find_all();
@@ -22,7 +30,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["addinstusage"]);
-                $data["date"] = date("Y-m-d");
+                $data["date"] = date("c"); // Let's store directly ISO 860 timestamps
                 $instu = new Institution_usage($data);
                 $instu->save();
             }
@@ -52,7 +60,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["updateinstusage"]);
-                $data["date"] = date("Y-m-d");
+                $data["date"] = date("c"); // Let's store directly ISO 860 timestamps
                 $instu = new Institution_usage();
                 $instu = $instu->find_one_by_id($runtime['ident']);
                 $instu->data = $data;

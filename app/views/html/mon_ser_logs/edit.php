@@ -3,19 +3,13 @@
 	<?php load_partial("mon_ser_logs_submenu"); ?>
 </div>
 <div id="monser">
+	<p class="splash">
+		Last modification timestamp is: <?php echo $mons['ts']; ?>
+	</p>
 	<form action="" method="post" onsubmit="this.updatemonserlog.disabled=true;">
 		<input type="hidden" name="action" value="updatemonserlog" />
 		<label for="mon_serid">ID of Monitored Server</label>
-		    <select name="mon_serid" >
-                        <?php
-                            foreach($ms as $i => $mid) {
-                                if($i == $mons['mon_serid'])
-                                    echo "<option value=\"$i\" selected=\"selected\" >".$rids[$i]." &rarr; ".$mid."</option>";
-                                else
-                                    echo "<option value=\"$i\" >".$rids[$i]." &rarr; ".$mid."</option>";
-                            }
-                        ?>
-                    </select>
+                    <?php echo select_tag($ms, 'mon_serid', $mons['mon_serid']); ?>
 		<label for="mon_type">Type of performed tests:</label>
 			<select name="mon_type">
 				<option value="0" <?php if($mons['mon_type'] == "0") echo "selected=\"selected\""; ?>>PAP</option>
@@ -33,7 +27,7 @@
 		<label for="r_resp_time">Response time for reject test</label>
 			<input type="text" name="r_resp_time" value="<?php echo $mons['r_resp_time'] ?>" />
 		<label for="last_mon_logid">ID of The Last Successful Monitoring Job</label>
-			<input type="text" name="mon_logid" value="<?php echo $mons['mon_logid'] ?>" />
+			<?php echo select_tag($ms, 'mon_logid', $mons['mon_logid']); ?>
 		<p>
 			<input type="submit" name="updatemonserlog" value="Update">
 		</p>

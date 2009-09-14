@@ -10,6 +10,14 @@
             pass_var('message', "List of Realm Data");
         }
         
+        function xml() {
+            global $runtime;
+            $runtime['format'] = 'xml';
+            $i = new Realm_data();
+            pass_var("ins", $i->find_all());
+            load_view('xml');
+        }
+        
         function add() {
             $r = new Realm();
             $r = $r->find_all();
@@ -22,7 +30,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["addrealmdata"]);
-                $data["ts"] = date("Y-m-d");
+                $data["ts"] = date("c"); // Let's store directly ISO 860 timestamps
                 $r = new Realm_data($data);
                 $r->save();
             }
@@ -52,7 +60,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["updaterealmdata"]);
-                $data["ts"] = date("Y-m-d");
+                $data["ts"] = date("c"); // Let's store directly ISO 860 timestamps
                 $r = new Realm_data();
                 $r = $r->find_one_by_id($runtime['ident']);
                 $r->data = $data;

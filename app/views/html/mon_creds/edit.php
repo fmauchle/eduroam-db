@@ -10,16 +10,9 @@
 		<label for="password">Password:</label>
 			<input type="text" name="password" value="<?php if($monc['username']) echo $monc['password']; ?>" />
 		<label for="mon_realmid">Monitored Realm:</label>
-		    <select name="mon_realmid" >
-                        <?php
-			    foreach($rids as $i => $tid) {
-                                if($i == $monc['mon_realmid'])
-                                    echo "<option value=\"$i\" selected=\"selected\" >$tid</option>";
-                                else
-                                     echo "<option value=\"$i\" >$tid</option>";
-                            }
-                        ?>
-                    </select>
+                    <?php
+                        echo select_tag($rids, 'mon_realmid', $monc['mon_realmid']);
+                    ?>
 		<p>
 			<input type="submit" name="updatemoncred" value="Update">
 		</p>
