@@ -8,7 +8,12 @@
             pass_var('message', "List of Service Locations");
         }
         
-        function edit() {            
+        function edit() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             if($_POST["action"] == "addservice") {
                 global $runtime;
                 $data = $_POST;
@@ -62,6 +67,11 @@
         }
         
         function add() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             if($_POST["action"] == "addservice") {
                 $data = $_POST;
                 unset($data["action"]);
@@ -83,6 +93,11 @@
         }
         
         function delete() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             global $runtime;
             $s = new Service_loc();
             $s = $s->find_one_by_id($runtime['ident']);

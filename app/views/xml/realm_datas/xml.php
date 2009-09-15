@@ -1,25 +1,13 @@
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>' ?>
 <realm_data_root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="realm_data.xsd">
+<?php foreach($rds as $rd): ?>
 	<realm_data>
-		<country>country0</country>
-		<number_IdP>2147483647</number_IdP>
-		<number_SP>2147483647</number_SP>
-		<number_SPIdP>2147483647</number_SPIdP>
-		<ts>2006-05-04T18:13:51.0Z</ts>
+		<country><?php echo $rd->realm['country']; ?></country>
+		<number_IdP><?php echo $rd->data['number_IdP']; ?></number_IdP>
+		<number_SP><?php echo $rd->data['number_SP']; ?></number_SP>
+		<number_SPIdP><?php echo $rd->data['number_SPIdP']; ?></number_SPIdP>
+		<ts><?php echo $rd->data['ts']; ?></ts>
 	</realm_data>
-	<realm_data>
-		<country>country1</country>
-		<number_IdP>2147483647</number_IdP>
-		<number_SP>2147483647</number_SP>
-		<number_SPIdP>2147483647</number_SPIdP>
-		<ts>2006-05-04T18:13:51.0Z</ts>
-	</realm_data>
-	<realm_data>
-		<country>country2</country>
-		<number_IdP>2147483647</number_IdP>
-		<number_SP>2147483647</number_SP>
-		<number_SPIdP>2147483647</number_SPIdP>
-		<ts>2006-05-04T18:13:51.0Z</ts>
-	</realm_data>
+<?php endforeach; ?>
 </realm_data_root>

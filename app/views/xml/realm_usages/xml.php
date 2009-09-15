@@ -1,29 +1,14 @@
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>' ?>
 <realm_usages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="realm_usage.xsd">
-	<realm_usage country="country0">
-		<usage date="2006-05-04">
-			<national_sn>2147483647</national_sn>
-			<international_sn>2147483647</international_sn>
+<?php foreach($realms as $r):?>
+	<realm_usage country="<?php echo $r->data['country'] ?>">
+<?php foreach($r->usage as $u): ?>
+		<usage date="<?php echo $u->data['date'] ?>">
+			<national_sn><?php echo $u->data['national_sn'] ?></national_sn>
+			<international_sn><?php echo $u->data['international_sn'] ?></international_sn>
 		</usage>
-		<usage date="2006-05-04"> </usage>
+<?php endforeach; ?>
 	</realm_usage>
-	<realm_usage country="country1">
-		<usage date="2006-05-04">
-			<national_sn>2147483647</national_sn>
-		</usage>
-		<usage date="2006-05-04">
-			<national_sn>2147483647</national_sn>
-			<international_sn>2147483647</international_sn>
-		</usage>
-		<usage date="2006-05-04">
-			<international_sn>2147483647</international_sn>
-		</usage>
-	</realm_usage>
-	<realm_usage country="country2">
-		<usage date="2006-05-04">
-			<national_sn>2147483647</national_sn>
-			<international_sn>2147483647</international_sn>
-		</usage>
-	</realm_usage>
+<?php endforeach; ?>
 </realm_usages>

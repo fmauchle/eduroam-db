@@ -2,7 +2,7 @@
     class mon_creds_controller {
         
         function index() {
-            $realms = new Realm();
+            $realms = new Mon_realm();
             $m = new Mon_cred();
             pass_var("realms", $realms->find_all());
             pass_var("m", $m->find_all());
@@ -11,6 +11,11 @@
         }
         
         function add() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             $r = new Mon_realm();
             $r = $r->find_all();
             $rids = array();
@@ -31,6 +36,11 @@
         }
         
         function delete() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             global $runtime;
             $i = new Mon_cred();
             $i = $i->find_one_by_id($runtime['ident']);
@@ -39,6 +49,11 @@
         }
         
         function edit() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             $r = new Mon_realm();
             $r = $r->find_all();
             $rids = array();

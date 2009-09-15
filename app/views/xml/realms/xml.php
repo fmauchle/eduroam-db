@@ -1,30 +1,22 @@
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>' ?>
 <realms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="realm.xsd">
+<?php foreach($realms as $r): ?>
 	<realm>
-		<country>country0</country>
-		<stype>0</stype>
-		<org_name lang="en">org_name0</org_name>
+		<country><?php echo $r->data['country'] ?></country>
+		<stype><?php echo $r->data['country'] ?></stype>
+		<org_name lang="en"><?php echo $r->data['country'] ?></org_name>
 		<address>
-			<street>street0</street>
-			<city>city0</city>
+			<street><?php echo $r->data['address_street'] ?></street>
+			<city><?php echo $r->data['address_city'] ?></city>
 		</address>
 		<contact>
-			<name>name0</name>
-			<email>email0</email>
-			<phone>phone0</phone>
+			<name><?php echo $r->data['contact_name'] ?></name>
+			<email><?php echo $r->data['contact_email'] ?></email>
+			<phone><?php echo $r->data['contact_phone'] ?></phone>
 		</contact>
-		<contact>
-			<name>name1</name>
-			<email>email1</email>
-			<phone>phone1</phone>
-		</contact>
-		<contact>
-			<name>name2</name>
-			<email>email2</email>
-			<phone>phone2</phone>
-		</contact>
-		<info_URL lang="en">http://www.eduroam.org/</info_URL>
-		<policy_URL lang="en">http://www.eduroam.org/</policy_URL>
-		<ts>2006-05-04T18:13:51.0Z</ts>
+		<info_URL lang="en"><?php echo $r->data['info_URL'] ?></info_URL>
+		<policy_URL lang="en"><?php echo $r->data['policy_URL'] ?></policy_URL>
+		<ts><?php echo $r->data['ts'] ?></ts>
 	</realm>
+<?php endforeach; ?>
 </realms>

@@ -11,12 +11,39 @@
         function xml() {
             global $runtime;
             $runtime['format'] = 'xml';
-            $i = new Institution();
-            pass_var("ins", $i->find_all());
+            $ins = new Institution();
+            $realms = new Realm();
+            $sls = new Service_loc();
+            $ins = $ins->find_all();
+            $realms = $realms->find_all();
+            $sls = $sls->find_all();
+            //Map all
+            foreach($realms as $r) {
+                foreach($ins as $in) {
+                    if($in->data['realmid'] == $r->data['id']) {
+                        $r->ins = $in;
+                    }
+                }
+            }
+            //Map all
+            foreach($realms as $r) {
+                foreach($sls as $s) {
+                    if($s->data['institutionid'] == $r->ins->data['id']) {
+                        $t[]->data = $s->data;
+                    }
+                }
+                $r->ins->locs = $t; $t = null;
+            }
+            pass_var("realms", $realms);
             load_view('xml');
         }
         
         function add() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             $r = new Realm();
             $r = $r->find_all();
             $rids = array();
@@ -36,6 +63,11 @@
         }
         
         function delete() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             global $runtime;
             $i = new Institution();
             $i = $i->find_one_by_id($runtime['ident']);
@@ -44,6 +76,11 @@
         }
         
         function edit() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             global $runtime;
             $r = new Realm();
             $r = $r->find_all();

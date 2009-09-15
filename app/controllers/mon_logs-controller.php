@@ -8,7 +8,12 @@
             pass_var('message', "List of Monitoring Logs");
         }
         
-        function add() {          
+        function add() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             if($_POST["action"] == "addmonlog") {
                 $data = $_POST;
                 unset($data["action"]);
@@ -24,6 +29,11 @@
         }
         
         function delete() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             global $runtime;
             $i = new Mon_log();
             $i = $i->find_one_by_id($runtime['ident']);
@@ -31,7 +41,12 @@
             redirect('mon_logs/');
         }
         
-        function edit() {         
+        function edit() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             if($_POST["action"] == "updatemonlog") {
                 global $runtime;
                 $data = $_POST;

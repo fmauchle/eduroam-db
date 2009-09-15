@@ -9,7 +9,7 @@
 		foreach($m as $monc) {
 			foreach($realms as $realm) {
 				if($realm->data['id'] == $monc->mon_realmid)
-					$realm_name = $realm->data['org_name'];
+					$realm_name = $realm->data['tested_realm'];
 			}
 			echo "<li><span class=\"delete\">";
 			echo getLink("X", "mon_creds/delete/".$monc->id);

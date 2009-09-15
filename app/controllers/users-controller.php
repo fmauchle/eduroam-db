@@ -13,7 +13,7 @@
             }
             
             if($this->session->get('nickname')) {
-                redirect('admin/');
+                redirect('/');
             }
             else {
                 $this->message .= " Please login.";
@@ -51,9 +51,10 @@
         }
         
         function sendToMail($data) {
+            global $config;
             $to = $data['email'];
-            $from = "contact@eduroam.ro";
-            $fromweb = "http://eduroam.ro";
+            $from = $config['email'];
+            $fromweb = $config['base_url'];
             $subject = "Eduroam Registration";
             $message = "You're now a eduroam admin.\n";
                 $message .= "Thank you for registration ".$data['name']."\n";
@@ -67,21 +68,29 @@
         }
         
         function adduser($data) {
-            $new_user['email'] = $data['email'];
-            $new_user['name'] = $data['name'];
-            $new_user['location'] = $data['location'];
-            $new_user['password'] = $this->random_password();
-            $this->sendToMail($new_user);
-            $new_user['password'] = md5($new_user['password']);
-            $this->user = new User($new_user);
-            $this->user->save();
-            $this->index("Registration successful. Check your email.");
+            $test_user = new User;
+            $test_user = $test_user->find_one_by_email($data['email']);
+            if($test_user) {
+                $this->index('Bad email.');
+            }
+            else {
+                $new_user['email'] = $data['email'];
+                $new_user['name'] = $data['name'];
+                $new_user['location'] = $data['location'];
+                $new_user['password'] = $this->random_password();
+                $this->sendToMail($new_user);
+                $new_user['password'] = md5($new_user['password']);
+                $this->user = new User($new_user);
+                $this->user->save();
+                $this->index("Registration successful. Check your email.");
+            }
         }
 
         // Login
         function login() {
             $this->title = "Login";
-            $this->message = "Login";
+            if(!$this->message)
+                $this->message = "Login";
             pass_var('message', $this->message);
             pass_var('title', $this->title);
             if($_POST['action'] == 'login') {
@@ -133,6 +142,11 @@
             pass_var('email', $this->session->get('email'));
             pass_var('message', $this->message);
             pass_var('title', $this->title);
+        }
+        
+        function info() {
+            pass_var('message', 'Here are some informations you might need.');
+            pass_var('title', 'Info Page');
         }
         
         // Logout

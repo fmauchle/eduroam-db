@@ -11,6 +11,11 @@
         }
         
         function add() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             $r = new Realm();
             $r = $r->find_all();
             
@@ -43,6 +48,11 @@
         }
         
         function delete() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             global $runtime;
             $i = new Mon_realm();
             $i = $i->find_one_by_id($runtime['ident']);
@@ -51,6 +61,11 @@
         }
         
         function edit() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             $r = new Realm();
             $r = $r->find_all();
             

@@ -4,6 +4,15 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . index.php [L]
+
+# redirect for xml files
+Options +FollowSymLinks 
+RewriteRule ^institution.xml$ "/index.php/institutions/xml" [R=301,NC,L]
+RewriteRule ^institution.xml$ "/index.php/institution_usages/xml" [R=301,NC,L]
+RewriteRule ^institution.xml$ "/index.php/realms/xml" [R=301,NC,L]
+RewriteRule ^institution.xml$ "/index.php/realm_datas/xml" [R=301,NC,L]
+RewriteRule ^institution.xml$ "/index.php/realm_usages/xml" [R=301,NC,L]
+
 </IfModule>
 # prevent database from being downloaded
 <FilesMatch "\.(sqlite|sqlite2|sqlite3|sq|sq2|sq3)$">

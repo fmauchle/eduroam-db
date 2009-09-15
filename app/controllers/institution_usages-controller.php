@@ -13,12 +13,29 @@
         function xml() {
             global $runtime;
             $runtime['format'] = 'xml';
-            $i = new Institution_usage();
-            pass_var("ins", $i->find_all());
+            $ins = new Institution();
+            $ius = new Institution_usage();
+            $ins = $ins->find_all();
+            $ius = $ius->find_all();
+            //Map all
+            foreach($ins as $in) {
+                foreach($ius as $is) {
+                    if($in->data['id'] == $is->data['institutionid']) {
+                        $in->usage = $is->data;
+                    }
+                }
+            }
+            
+            pass_var("ins", $ins);
             load_view('xml');
         }
         
         function add() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             $i = new Institution();
             $i = $i->find_all();
             $insts = array();
@@ -41,6 +58,11 @@
         
         function delete() {
             global $runtime;
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             $instu = new Institution_usage();
             $instu = $instu->find_one_by_id($runtime['ident']);
             $instu->delete();
@@ -48,6 +70,11 @@
         }
         
         function edit() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             $i = new Institution();
             $i = $i->find_all();
             $insts = array();

@@ -1,4 +1,7 @@
 <div class="help">
+	<?php load_partial("menu"); ?>
+</div>
+<div class="help">
     <?php echo getLink("Login", "users/login") ?>
 </div>
 <div id="register">

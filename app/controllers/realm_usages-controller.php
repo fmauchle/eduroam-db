@@ -13,12 +13,29 @@
         function xml() {
             global $runtime;
             $runtime['format'] = 'xml';
-            $i = new Realm_usage();
-            pass_var("realms", $i->find_all());
+            $rus = new Realm_usage();
+            $realms = new Realm();
+            $rus = $rus->find_all();
+            $realms = $realms->find_all();
+            //Map all
+            foreach($realms as $r) {
+                foreach($rus as $ru) {
+                    if($ru->data['realmid'] == $r->data['id']) {
+                        $t[]->data = $ru->data;
+                    }
+                }
+                $r->usage = $t; $t = null;
+            }
+            pass_var("realms", $realms);
             load_view('xml');
         }
         
         function add() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             $r = new Realm();
             $r = $r->find_all();
             $rids = array();
@@ -40,6 +57,11 @@
         }
         
         function delete() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             global $runtime;
             $i = new Realm_usage();
             $i = $i->find_one_by_id($runtime['ident']);
@@ -48,6 +70,11 @@
         }
         
         function edit() {
+            // Is logged in?
+            $this->session = new Session;
+            if(!$this->session->get('email') && !$this->session->get('id'))
+                die(redirect(''));
+            
             $r = new Realm();
             $r = $r->find_all();
             $rids = array();

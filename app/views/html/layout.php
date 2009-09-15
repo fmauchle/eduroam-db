@@ -26,11 +26,14 @@
             <?php global $message; echo $message ?>
           </div>
           <div id="main">
-          <?php include $runtime['view'] ?>
+          <?php include $runtime['view'];?>
           </div>
             <div id="footer">
             <p>
-            <?php echo "&copy;".date('Y')." <a href=\"http://eduroam.ro\">Eduroam România</a>"; ?>
+            <?php echo "&copy;".date('Y')." <a href=\"".$config['base_url']."\">Eduroam Dev Team</a>"; ?> &mdash;
+            <a href="http://github.com/stas/eduroam-db">Source code</a>
+            &harr;
+            <a href="http://github.com/stas/eduroam-db/issues">Report issues</a>
             </p>
           </div>
     </div>

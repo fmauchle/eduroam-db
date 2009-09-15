@@ -1,33 +1,58 @@
+<?php
+function t_or_f($test) {
+	if($test)
+		return 'true';
+	else
+		return 'false';
+}
+?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>' ?>
 <institutions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="institution.xsd">
+<?php foreach ($realms as $r): ?>
 	<institution>
-		<country>country0</country>
-		<type>1</type>
-		<inst_realm>inst_realm0</inst_realm>
-		<org_name lang="en">org_name0</org_name>
+		<country><?php echo $r->data['country']?></country>
+		<type><?php echo $r->ins->data['type']?></type>
+		<inst_realm><?php echo $r->ins->data['inst_realm']?></inst_realm>
+		<org_name lang="<?php echo $r->data['country']?>"><?php echo $r->ins->data['org_name']?></org_name>
 		<address>
-			<street>street0</street>
-			<city>city0</city>
+			<street><?php echo $r->ins->data['address_street']?></street>
+			<city><?php echo $r->ins->data['address_city']?></city>
 		</address>
 		<contact>
-			<name>name0</name>
-			<email>email0</email>
-			<phone>phone0</phone>
+			<name><?php echo $r->ins->data['contact_name']?></name>
+			<email><?php echo $r->ins->data['contact_email']?></email>
+			<phone><?php echo $r->ins->data['contact_phone']?></phone>
 		</contact>
 		<contact>
-			<name>name1</name>
-			<email>email1</email>
-			<phone>phone1</phone>
+			<name><?php echo $r->data['contact_name']?></name>
+			<email><?php echo $r->data['contact_email']?></email>
+			<phone><?php echo $r->data['contact_phone']?></phone>
 		</contact>
-		<contact>
-			<name>name2</name>
-			<email>email2</email>
-			<phone>phone2</phone>
-		</contact>
-		<info_URL lang="en">http://www.eduroam.org/</info_URL>
-		<info_URL lang="hr">http://www.eduroam.hr/</info_URL>
-		<policy_URL lang="en">http://www.eduroam.org/</policy_URL>
-		<policy_URL lang="es">http://www.eduroam.es/</policy_URL>
-		<ts>2006-05-04T18:13:51.0Z</ts>
+		<info_URL lang="<?php echo $r->data['country']?>"><?php echo $r->ins->data['info_url']?></info_URL>
+		<policy_URL lang="<?php echo $r->data['country']?>"><?php echo $r->ins->data['policy_url']?></policy_URL>
+		<ts><?php echo $r->ins->data['ts']?></ts>
+<?php if($r->ins->locs): foreach($r->ins->locs as $s): ?>
+		<location>
+			<longitude><?php echo $s->data['longitude']?></longitude>
+			<latitude><?php echo $s->data['latitude']?></latitude>
+			<loc_name lang="<?php echo $r->data['country']?>"><?php echo $s->data['loc_name']?></loc_name>
+			<address>
+				<street><?php echo $s->data['address_street']?></street>
+				<city><?php echo $s->data['address_city']?></city>
+			</address>
+			<SSID><?php echo $s->data['SSID']?></SSID>
+			<enc_level><?php echo $s->data['enc_level']?></enc_level>
+			<port_restrict><?php echo t_or_f($s->data['port_restrict'])?></port_restrict>
+			<transp_proxy><?php echo t_or_f($s->data['transp_proxy'])?></transp_proxy>
+			<IPv6><?php echo t_or_f($s->data['IPv6'])?></IPv6>
+			<NAT><?php echo t_or_f($s->data['NAT'])?></NAT>
+			<AP_no><?php echo $s->data['AP_no']?></AP_no>
+			<wired><?php echo t_or_f($s->data['wired'])?></wired>
+			<info_URL lang="<?php echo $r->data['country']?>"><?php echo $s->data['info_URL']?></info_URL>
+		</location>
+<?php endforeach; endif; ?>
 	</institution>
+<?php
+endforeach;
+?>
 </institutions>
