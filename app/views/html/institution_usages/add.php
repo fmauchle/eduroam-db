@@ -10,7 +10,7 @@
 			echo select_tag($insts, 'institutionid');
                 ?>
 		<label for="local_sn">Number of Successfully Authenticated Sessions per Day (Local Level)</label>
-			<input type="text" name="national_sn" />
+			<input type="text" name="local_sn" />
 		<label for="national_sn">Number of Successfully Authenticated Sessions per Day (National Level)</label>
 			<input type="text" name="national_sn" />
 		<label for="international_sn">Number of Successfully Authenticated Sessions per Day (International Level)</label>
