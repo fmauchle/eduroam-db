@@ -8,10 +8,10 @@ RewriteRule . index.php [L]
 # redirect for xml files
 Options +FollowSymLinks 
 RewriteRule ^institution.xml$ "/index.php/institutions/xml" [R=301,NC,L]
-RewriteRule ^institution.xml$ "/index.php/institution_usages/xml" [R=301,NC,L]
-RewriteRule ^institution.xml$ "/index.php/realms/xml" [R=301,NC,L]
-RewriteRule ^institution.xml$ "/index.php/realm_datas/xml" [R=301,NC,L]
-RewriteRule ^institution.xml$ "/index.php/realm_usages/xml" [R=301,NC,L]
+RewriteRule ^institution_usage.xml$ "/index.php/institution_usages/xml" [R=301,NC,L]
+RewriteRule ^realm.xml$ "/index.php/realms/xml" [R=301,NC,L]
+RewriteRule ^realm_data.xml$ "/index.php/realm_datas/xml" [R=301,NC,L]
+RewriteRule ^realm_usage.xml$ "/index.php/realm_usages/xml" [R=301,NC,L]
 
 </IfModule>
 # prevent database from being downloaded
