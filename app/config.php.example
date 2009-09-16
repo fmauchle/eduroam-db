@@ -2,6 +2,7 @@
 $config = array(
   'database' => 'db/eduroam.db',
   'base_url' => 'http://', //end with a slash
+  'email' => 'contact@eduroam.<TLD>',
   'enable_mod_rewrite' => false,
   //'error_reporting' => E_WARNING,
   'keep_log' => false, //will log all queries
