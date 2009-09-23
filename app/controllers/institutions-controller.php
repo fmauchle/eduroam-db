@@ -20,20 +20,23 @@
             //Map all
             foreach($realms as $r) {
                 foreach($ins as $in) {
+                    foreach($sls as $s) {
+                        if($s->data['institutionid'] == $in->data['id']) {
+                            $t[]->data = $s->data;
+                        }
+                    }
+                    
+                    $in->sl = $t;
+                    $t = null;
+                    
                     if($in->data['realmid'] == $r->data['id']) {
-                        $r->ins = $in;
+                        $i[]->data = $in->data;
                     }
                 }
+                $r->ins = $i;
+                $i = null;
             }
-            //Map all
-            foreach($realms as $r) {
-                foreach($sls as $s) {
-                    if($s->data['institutionid'] == $r->ins->data['id']) {
-                        $t[]->data = $s->data;
-                    }
-                }
-                $r->ins->locs = $t; $t = null;
-            }
+            
             pass_var("realms", $realms);
             load_view('xml');
         }
