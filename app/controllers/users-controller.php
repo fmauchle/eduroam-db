@@ -37,6 +37,28 @@
             }
         }
         
+        // Recover
+        function recover() {
+            $this->title = "Recover";
+            $this->message = "Recover your account";
+            if($_POST['action'] == 'recover') {
+                $forgot = new User;
+                $test_user = $forgot->find_one_by_email(mysql_escape_string($_POST['email']));
+                if($_POST['email'] == $test_user->email) {
+                    $forgot_user['email'] = $test_user->email;
+                    $forgot_user['name'] = $test_user->name;
+                    $forgot_user['location'] = $test_user->location;
+                    $forgot_user['password'] = $this->random_password();
+                    $this->sendToMail($forgot_user, true);
+                    $test_user->password = md5($forgot_user['password']);
+                    $test_user->save();
+                    $this->message = "An email was sent to your email.";
+                }
+            }
+            pass_var('message', $this->message);
+            pass_var('title', $this->title);
+        }
+        
         function random_password()
         {
             $len = 8;
@@ -50,14 +72,19 @@
             return $result;
         }
         
-        function sendToMail($data) {
+        function sendToMail($data, $recover = false) {
             global $config;
             $to = $data['email'];
             $from = $config['email'];
             $fromweb = $config['base_url'];
             $subject = "Eduroam Registration";
-            $message = "You're now a eduroam admin.\n";
-                $message .= "Thank you for registration ".$data['name']."\n";
+            $message = "Hi, ".$data['name']."\n";
+            if(!$recover) {
+                $message .= "You're now a eduroam admin.\n";
+                $message .= "Thank you for registration.\n";
+            }
+            else
+                $message .= "You asked for an account recovery.\n";
                 $message .= "\tYour login information is:\n";
                 $message .= "\t\tEmail: ".$data['email']."\n";
                 $message .= "\t\tPassword: ".$data['password']."\n";
