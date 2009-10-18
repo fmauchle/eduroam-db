@@ -47,7 +47,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["addinstusage"]);
-                $data["date"] = date("c"); // Let's store directly ISO 860 timestamps
+                $data["date"] = date("Y-m-d");
                 $instu = new Institution_usage($data);
                 $instu->save();
             }
@@ -87,7 +87,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["updateinstusage"]);
-                $data["date"] = date("c"); // Let's store directly ISO 860 timestamps
+                $data["date"] = date("Y-m-d");
                 $instu = new Institution_usage();
                 $instu = $instu->find_one_by_id($runtime['ident']);
                 $instu->data = $data;

@@ -47,7 +47,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["addrealmusage"]);
-                $data["date"] = date("c"); // Let's store directly ISO 860 timestamps
+                $data["date"] = date("Y-m-d");
                 $r = new Realm_usage($data);
                 $r->save();
             }
@@ -87,7 +87,7 @@
                 $data = $_POST;
                 unset($data["action"]);
                 unset($data["updaterealmusage"]);
-                $data["date"] = date("c"); // Let's store directly ISO 860 timestamps
+                $data["date"] = date("Y-m-d");
                 $r = new Realm_usage();
                 $r = $r->find_one_by_id($runtime['ident']);
                 $r->data = $data;
