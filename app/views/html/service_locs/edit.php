@@ -15,7 +15,7 @@
 		<label for="longitude">Longitude</label>
 			<input type="text" name="longitude" value="<?php echo $service['longitude'] ?>" />
 		<label for="latitude">Latitude</label>
-			<input type="text" name="latitude" value="<?php echo $service['longitude'] ?>" />
+			<input type="text" name="latitude" value="<?php echo $service['latitude'] ?>" />
 		<label for="loc_name">Location Name</label>
 			<input type="text" name="loc_name" value="<?php echo $service['loc_name'] ?>" />
 		<label for="address_street">Location Address</label>
