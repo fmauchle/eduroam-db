@@ -6,6 +6,7 @@ $config = array(
   'enable_mod_rewrite' => false,
   //'error_reporting' => E_WARNING,
   'keep_log' => false, //will log all queries
-  'debug' => false
+  'debug' => false,
+  'roid' => 'geant-assigned-id'
 );
 ?>
