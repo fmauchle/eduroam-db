@@ -57,6 +57,11 @@
 				<option value="0" <?php if($service['NAT'] == 0) echo 'selected="selected"';?> >No</option>
 				<option value="1" <?php if($service['NAT'] == 1) echo 'selected="selected"';?> >Yes</option>
 			</select>
+		<label for="HS20">Provides Hotspot2.0</label>
+			<select name="HS20" >
+				<option value="0" <?php if($service['HS20'] == 0) echo 'selected="selected"';?>>No</option>
+				<option value="1" <?php if($service['HS20'] == 1) echo 'selected="selected"';?>>Yes</option>
+			</select>
 		<label for="AP_no">Number of APs <small>(number of enabled sockets for wired access)</small></label>
 			<input type="text" name="AP_no" value="<?php echo $service['AP_no'] ?>" />
 		<label for="wired">Wired Access</label>

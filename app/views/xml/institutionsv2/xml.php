@@ -1,9 +1,12 @@
 <?php
-function t_or_f($test) {
-	if($test)
-		return 'true';
-	else
-		return 'false';
+function taglist($loc) {
+	$tags = array();
+	if ($loc->data['port_restrict']) array_push($tags,"port_restrict");
+	if ($loc->data['transp_proxy']) array_push($tags,"transp_proxy");
+	if ($loc->data['IPv6']) array_push($tags,"IPv6");
+	if ($loc->data['NAT']) array_push($tags,"NAT");
+	if ($loc->data['HS20']) array_push($tags,"HS2.0");
+	return join(',',$tags);
 }
 ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>' ?>
@@ -71,11 +74,7 @@ if($ins->data['sl']): foreach($ins->data['sl'] as $s): ?>
 			</address>
 			<SSID><?php echo $s->data['SSID']?></SSID>
 			<enc_level><?php echo $s->data['enc_level']?></enc_level>
-<!--
-			<port_restrict><?php echo t_or_f($s->data['port_restrict'])?></port_restrict>
-			<transp_proxy><?php echo t_or_f($s->data['transp_proxy'])?></transp_proxy>
-			<IPv6><?php echo t_or_f($s->data['IPv6'])?></IPv6>
-			<NAT><?php echo t_or_f($s->data['NAT'])?></NAT> -->
+			<tag><?php echo taglist($s) ?></tag>
 			<AP_no><?php echo $s->data['AP_no']?></AP_no>
 			<info_URL lang="en"><?php echo $s->data['info_URL']?></info_URL>
 <?php if(strtolower($r->data['country']) != "en"): ?>

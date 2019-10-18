@@ -7,6 +7,5 @@ ALTER table institution ADD stage INT(1) default 1;
 ALTER table institution ADD contact_type INT(1) default 0;
 ALTER table institution ADD contact_privacy INT(1) default 0;
 ALTER table service_loc ADD stage INT(1) default 1;
-
-
+ALTER table service_loc ADD HS20 INT(1) default 0;
 COMMIT;

@@ -54,6 +54,11 @@
 				<option value="0">No</option>
 				<option value="1">Yes</option>
 			</select>
+		<label for="HS20">Provides Hotspot2.0</label>
+			<select name="HS20" >
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</select>
 		<label for="AP_no">Number of APs <small>(number of enabled sockets for wired access)</small></label>
 			<input type="text" name="AP_no" />
 		<label for="wired">Wired Access</label>

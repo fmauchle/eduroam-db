@@ -39,6 +39,7 @@
                                     'transp_proxy',
                                     'IPv6',
                                     'NAT',
+                                    'HS20',
                                     'AP_no',
                                     'wired',
                                     'info_URL',
