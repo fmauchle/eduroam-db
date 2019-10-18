@@ -3,6 +3,7 @@ CREATE TABLE service_loc (id INT,
 institutionid INT,
 longitude numbers,
 latitude numbers,
+stage int(1),
 loc_name varchar,
 address_street varchar,
 address_city varchar,
@@ -118,23 +119,28 @@ location varchar
 INSERT INTO "users" VALUES(1,NULL,'47eb752bac1c08c75e30d9624b3e58b7','Stas Sushkov','stas@nerd.ro','UTCN, Cluj');
 CREATE TABLE realm (
 id int,
+roid varchar,
 country varchar(2),
 stype int(1),
+stage int(1),
 org_name varchar,
 address_street varchar,
 address_city varchar,
 contact_name varchar,
 contact_email varchar,
 contact_phone numbers,
+contact_type INT(1),
+contact_privacy INT(1),
 info_URL varchar,
 policy_URL varchar,
 ts date
 );
-INSERT INTO "realm" VALUES(1,'RO',1,'Technical University of Cluj-Napoca','str. Baritiu 26','Cluj-Napoca','TUCN','admin@net.utcluj.ro',40765655963,'http://utcluj.ro/','http://eduroam.utcluj.ro/','2009-05-19');
+INSERT INTO "realm" VALUES(1,'tbd','RO',1,1,'Technical University of Cluj-Napoca','str. Baritiu 26','Cluj-Napoca','TUCN','admin@net.utcluj.ro',40765655963,0,0,'http://utcluj.ro/','http://eduroam.utcluj.ro/','2009-05-19');
 CREATE TABLE institution (
 id INT,
 realmid INT,
 type INT(1),
+stage INT(1),
 inst_realm varchar,
 org_name varchar,
 address_street varchar,
@@ -142,9 +148,11 @@ address_city varchar,
 contact_name varchar,
 contact_email varchar,
 contact_phone varchar,
+contact_type INT(1),
+contact_privacy INT(1),
 info_url varchar,
 policy_url varchar,
 ts date
 );
-INSERT INTO "institution" VALUES(1,1,1,'Căminul 7 Observator','Observator, căminul 7','str. Observatorului 34','Cluj-Napoca','C7OBS','admin@c7.campus.utcluj.ro','40765655963','http://c7obs.net/','http://intranet.c7obs.net/','2009-05-19');
+INSERT INTO "institution" VALUES(1,1,1,1,'Căminul 7 Observator','Observator, căminul 7','str. Observatorului 34','Cluj-Napoca','C7OBS','admin@c7.campus.utcluj.ro','40765655963',0,0,'http://c7obs.net/','http://intranet.c7obs.net/','2009-05-19');
 COMMIT;

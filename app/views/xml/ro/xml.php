@@ -2,9 +2,9 @@
 <ROs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ro.xsd">
 <?php foreach($realms as $r): ?>
 	<RO>
-		<ROid><?php echo $config['roid'] ?></ROid>
+		<ROid><?php echo $r->data['roid'] ?></ROid>
 		<country><?php echo $r->data['country'] ?></country>
-		<stage>1</stage>
+		<stage><?php echo $r->data['stage'] ?></stage>
 		<org_name lang="en"><?php echo $r->data['org_name'] ?></org_name>
 <?php if(strtolower($r->data['country']) != "en"): ?>
 		<org_name lang="<?php echo strtolower($r->data['country']) ?>"><?php echo $r->data['org_name'] ?></org_name>
@@ -17,8 +17,8 @@
 			<name><?php echo $r->data['contact_name'] ?></name>
 			<email><?php echo $r->data['contact_email'] ?></email>
 			<phone><?php echo $r->data['contact_phone'] ?></phone>
-			<type>1</type>
-			<privacy>1</privacy>
+			<type><?php echo $r->data['contact_type'] ?></type>
+			<privacy><?php echo $r->data['contact_privacy'] ?></privacy>
 		</contact>
 		<info_URL lang="en"><?php echo $ins->data['info_url']?></info_URL>
 <?php if(strtolower($r->data['country']) != "en"): ?>

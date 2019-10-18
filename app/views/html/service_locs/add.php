@@ -13,6 +13,11 @@
 			<input type="text" name="longitude" />
 		<label for="latitude">Latitude</label>
 			<input type="text" name="latitude" />
+		<label for="stage">Locations's stage:</label>
+			<select name="stage">
+				<option value="0" >preproduction/test</option>
+				<option value="1" selected>active</option>
+			</select>
 		<label for="loc_name">Location Name</label>
 			<input type="text" name="loc_name" />
 		<label for="address_street">Location Address</label>

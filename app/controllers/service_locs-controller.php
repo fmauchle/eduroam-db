@@ -27,6 +27,7 @@
                                     'institutionid',
                                     'longitude',
                                     'latitude',
+                                    'stage',
                                     'loc_name',
                                     'address_city',
                                     'contact_name',

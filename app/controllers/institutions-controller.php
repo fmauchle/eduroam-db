@@ -100,6 +100,7 @@
                             $i->dirty = array(
                                 'realmid',
                                 'type',
+                                'stage',
                                 'inst_realm',
                                 'org_name',
                                 'address_street',
@@ -107,6 +108,8 @@
                                 'contact_name',
                                 'contact_email',
                                 'contact_phone',
+                                'contact_type',
+                                'contact_privacy',
                                 'info_URL',
                                 'policy_URL',
                                 'ts'

@@ -38,13 +38,17 @@
                 $r->data = $data;
                 $r->dirty = array(
                                     'country',
+                                    'roid',
                                     'stype',
+                                    'stage',
                                     'org_name',
                                     'address_street',
                                     'address_city',
                                     'contact_name',
                                     'contact_email',
                                     'contact_phone',
+                                    'contact_type',
+                                    'contact_privacy',
                                     'info_URL',
                                     'policy_URL',
                                     'ts'

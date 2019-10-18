@@ -14,12 +14,12 @@ foreach ($realms as $r):
 ?>
 	<institution>
 		<instid><?php echo $ins->data['id'] ?></instid>
-		<ROid><?php echo $config['roid']?></ROid>
+		<ROid><?php echo $r->data['roid']?></ROid>
 		<type><?php switch($ins->data['type']):
 			case 1: ?>IdP<?php break; 
 			case 2: ?>SP<?php break;
 			case 3: ?>IdP+SP<?php endswitch; ?></type>
-		<stage>1</stage>
+		<stage><?php echo $ins->data['stage'] ?></stage>
 <?php if($ins->data['type'] != 2): ?>
 		<inst_realm><?php echo $ins->data['inst_realm']?></inst_realm>
 <?php endif ?>
@@ -35,15 +35,15 @@ foreach ($realms as $r):
 			<name><?php echo $ins->data['contact_name']?></name>
 			<email><?php echo $ins->data['contact_email']?></email>
 			<phone><?php echo $ins->data['contact_phone']?></phone>
-			<type>0</type>
-			<privacy>0</privacy>
+			<type><?php echo $ins->data['contact_type'] ?></type>
+			<privacy><?php echo $ins->data['contact_privacy'] ?></privacy>
 		</contact>
 		<contact>
 			<name><?php echo $r->data['contact_name']?></name>
 			<email><?php echo $r->data['contact_email']?></email>
 			<phone><?php echo $r->data['contact_phone']?></phone>
-			<type>1</type>
-			<privacy>1</privacy>
+			<type><?php echo $r->data['contact_type'] ?></type>
+			<privacy><?php echo $r->data['contact_privacy'] ?></privacy>
 		</contact>
 		<info_URL lang="en"><?php echo $ins->data['info_url']?></info_URL>
 <?php if(strtolower($r->data['country']) != "en"): ?>
@@ -59,7 +59,7 @@ if($ins->data['sl']): foreach($ins->data['sl'] as $s): ?>
 		<location>
 			<locationid><?php echo $s->data['id'] ?></locationid>
 			<coordinates><?php echo $s->data['longitude']?>,<?php echo $s->data['latitude']?></coordinates>
-			<stage>1</stage>
+			<stage><?php echo $s->data['stage'] ?></stage>
 			<type>0</type>
 			<loc_name lang="en"><?php echo $s->data['loc_name']?></loc_name>
 <?php if(strtolower($r->data['country']) != "en"): ?>

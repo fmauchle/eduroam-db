@@ -17,6 +17,11 @@
 				<option value="2" <?php if($institution->type == 2) echo'selected=\"selected\"'; ?>>SP</option>
 				<option value="3" <?php if($institution->type == 3) echo'selected=\"selected\"'; ?>>idP & SP</option>
 			</select>
+		<label for="stage">Institutions's stage:</label>
+			<select name="stage">
+				<option value="0" <?php if($institution->stage == 0) echo'selected=\"selected\"'; ?>>preproduction/test</option>
+				<option value="1" <?php if($institution->stage == 1) echo'selected=\"selected\"'; ?>>active</option>
+			</select>
 		<label for="inst_realm">Institution Realm (for IdPs only)</label>
 			<input type="text" name="inst_realm" value="<?php echo $institution->inst_realm ?>" />
 		<label for="org_name">Institution Corporate Name</label>
@@ -31,6 +36,16 @@
 			<input type="text" name="contact_email" value="<?php echo $institution->contact_email ?>"/>
 		<label for="contact_phone">Institution Representative Phone</label>
 			<input type="text" name="contact_phone" value="<?php echo $institution->contact_phone ?>"/>
+		<label for="contact_type">Contact type:</label>
+			<select name="contact_type">
+				<option value="0" <?php if($institution->contact_type == 0) echo'selected=\"selected\"'; ?>>person</option>
+				<option value="1" <?php if($institution->contact_type == 1) echo'selected=\"selected\"'; ?>>service/department</option>
+			</select>
+		<label for="contact_privacy">Contact privacy:</label>
+			<select name="contact_privacy">
+				<option value="0" <?php if($institution->contact_privacy == 0) echo'selected=\"selected\"'; ?>>private</option>
+				<option value="1" <?php if($institution->contact_privacy == 1) echo'selected=\"selected\"'; ?>>public</option>
+			</select>
 		<label for="info_URL">Institution Web Page</label>
 			<input type="text" name="info_URL" value="<?php echo $institution->info_url ?>"/>
 		<label for="policy_URL">Institution Policy Web Page</label>
