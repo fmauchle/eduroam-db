@@ -63,7 +63,7 @@ if($ins->data['sl']): foreach($ins->data['sl'] as $s): ?>
 			<IPv6><?php echo t_or_f($s->data['IPv6'])?></IPv6>
 			<NAT><?php echo t_or_f($s->data['NAT'])?></NAT>
 			<AP_no><?php echo $s->data['AP_no']?></AP_no>
-			<wired><?php echo t_or_f($s->data['wired'])?></wired>
+			<wired><?php echo t_or_f($s->data['wired_no'])?></wired>
 			<info_URL lang="en"><?php echo $s->data['info_URL']?></info_URL>
 <?php if(strtolower($r->data['country']) != "en"): ?>
 			<info_URL lang="<?php echo strtolower($r->data['country'])?>"><?php echo $s->data['info_URL']?></info_URL>

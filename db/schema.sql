@@ -18,7 +18,7 @@ IPv6 int(1),
 NAT int(1),
 HS20 int(1),
 AP_no int,
-wired int(1) default 0,
+wired_no int,
 info_URL varchar,
 ts date
 );

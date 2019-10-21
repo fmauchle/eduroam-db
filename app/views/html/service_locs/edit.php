@@ -62,13 +62,10 @@
 				<option value="0" <?php if($service['HS20'] == 0) echo 'selected="selected"';?>>No</option>
 				<option value="1" <?php if($service['HS20'] == 1) echo 'selected="selected"';?>>Yes</option>
 			</select>
-		<label for="AP_no">Number of APs <small>(number of enabled sockets for wired access)</small></label>
+		<label for="AP_no">Number of APs <small>(put 0 for none or unknown)</small></label>
 			<input type="text" name="AP_no" value="<?php echo $service['AP_no'] ?>" />
-		<label for="wired">Wired Access</label>
-			<select name="wired" >
-				<option value="0" <?php if($service['wired'] == 0) echo 'selected="selected"';?> >No</option>
-				<option value="1" <?php if($service['wired'] == 1) echo 'selected="selected"';?> >Yes</option>
-			</select>
+		<label for="wired_no">Number of wired access ports <small>(put 0 for none or unknown)</small></label>
+			<input type="text" name="wired_no" value="<?php echo $service['wired_no'] ?>" />
 		<label for="info_URL">Institution Web Page</label>
 			<input type="text" name="info_URL" value="<?php echo $service['info_URL'] ?>" />
 		<p>

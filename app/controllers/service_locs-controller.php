@@ -41,7 +41,7 @@
                                     'NAT',
                                     'HS20',
                                     'AP_no',
-                                    'wired',
+                                    'wired_no',
                                     'info_URL',
                                     'ts'
                                 );

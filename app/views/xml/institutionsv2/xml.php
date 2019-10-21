@@ -74,8 +74,11 @@ if($ins->data['sl']): foreach($ins->data['sl'] as $s): ?>
 			</address>
 			<SSID><?php echo $s->data['SSID']?></SSID>
 			<enc_level><?php echo $s->data['enc_level']?></enc_level>
-			<tag><?php echo taglist($s) ?></tag>
 			<AP_no><?php echo $s->data['AP_no']?></AP_no>
+<?php if($s->data['wired_no']): ?>
+			<wired_no><?php echo $s->data['wired_no']?></wired_no>
+<?php endif; ?>
+			<tag><?php echo taglist($s) ?></tag>
 			<info_URL lang="en"><?php echo $s->data['info_URL']?></info_URL>
 <?php if(strtolower($r->data['country']) != "en"): ?>
 			<info_URL lang="<?php echo strtolower($r->data['country'])?>"><?php echo $s->data['info_URL']?></info_URL>

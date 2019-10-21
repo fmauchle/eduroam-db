@@ -59,13 +59,10 @@
 				<option value="0">No</option>
 				<option value="1">Yes</option>
 			</select>
-		<label for="AP_no">Number of APs <small>(number of enabled sockets for wired access)</small></label>
-			<input type="text" name="AP_no" />
-		<label for="wired">Wired Access</label>
-			<select name="wired" >
-				<option value="0">No</option>
-				<option value="1">Yes</option>
-			</select>
+		<label for="AP_no">Number of APs <small>(put 0 for none or unknown)</small></label>
+			<input type="text" name="AP_no" value="0" />
+		<label for="wired_no">Number of wired access ports <small>(put 0 for none or unknown)</label>
+			<input type="text" name="wired_no" value="0" />
 		<label for="info_URL">Institution Web Page</label>
 			<input type="text" name="info_URL" />
 		<p>
