@@ -9,7 +9,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <title>Eduroam DB / <?php echo $title ?></title>
+    <title>Eduroam DBv2 / <?php echo $title ?></title>
     <?php load_js('jquery') ?>
     <?php load_js('jquery-calendar') ?>
     <?php load_js('load_calendar') ?>
@@ -20,7 +20,7 @@
   <body>
     <div id="content">
           <div id="header">
-                <h1>Eduroam DB</h1>
+                <h1>Eduroam DB<small>v2</small></h1>
           </div>
           <div class="message">
             <?php global $message; echo $message ?>
